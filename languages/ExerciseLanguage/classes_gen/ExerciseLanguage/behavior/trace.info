@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1163670490218:jetbrains.mps.baseLanguage.structure.SwitchStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+  <root>
+    <file name="BehaviorAspectDescriptor.java">
+      <unit at="14,0,32,0" name="ExerciseLanguage.behavior.BehaviorAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:28511662-308c-46fa-a0c7-cece78ef3675(ExerciseLanguage.behavior)/5498555192070628034">
+    <file name="Worksheet__BehaviorDescriptor.java">
+      <node id="5498555192070628034" at="29,0,30,0" concept="9" trace="CONCEPT" />
+      <node id="5498555192070628034" at="31,0,32,0" concept="9" trace="getScope_id52_Geb4QDV$" />
+      <node id="5498555192070628034" at="33,0,34,0" concept="9" trace="BH_METHODS" />
+      <node id="5498555192071568625" at="38,116,39,39" concept="7" />
+      <node id="5498555192070692651" at="39,39,40,54" concept="5" />
+      <node id="5498555192070730340" at="42,166,43,113" concept="1" />
+      <node id="5498555192070771682" at="44,173,45,113" concept="1" />
+      <node id="5498555192071375319" at="47,5,48,52" concept="6" />
+      <node id="5498555192071390294" at="48,52,49,0" concept="8" />
+      <node id="5498555192070628034" at="56,114,57,21" concept="1" />
+      <node id="5498555192070628034" at="61,114,62,49" concept="5" />
+      <node id="5498555192070628034" at="63,26,64,56" concept="12" />
+      <node id="5498555192070628034" at="67,13,68,115" concept="6" />
+      <node id="5498555192070628034" at="69,14,70,58" concept="12" />
+      <node id="5498555192070628034" at="75,128,76,49" concept="5" />
+      <node id="5498555192070628034" at="77,26,78,56" concept="12" />
+      <node id="5498555192070628034" at="81,14,82,58" concept="12" />
+      <node id="5498555192070628034" at="88,48,89,22" concept="6" />
+      <node id="5498555192070628034" at="94,40,95,19" concept="6" />
+      <node id="5498555192070628034" at="99,0,100,0" concept="9" trace="IntegerDeclaration$CR" />
+      <node id="5498555192070628034" at="100,0,101,0" concept="9" trace="BooleanDeclaration$d1" />
+      <node id="5498555192070628034" at="104,0,105,0" concept="9" trace="body$WTbM" />
+      <node id="5498555192070628034" at="35,0,37,0" concept="10" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="5498555192070628034" at="52,0,54,0" concept="0" trace="Worksheet__BehaviorDescriptor#()V" />
+      <node id="5498555192070628034" at="62,49,65,5" concept="3" />
+      <node id="5498555192070628034" at="76,49,79,5" concept="3" />
+      <node id="5498555192070628034" at="55,0,59,0" concept="4" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="5498555192070628034" at="79,5,83,5" concept="11" />
+      <node id="5498555192070722974" at="41,106,46,7" concept="3" />
+      <node id="5498555192070628034" at="86,0,91,0" concept="4" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="5498555192070628034" at="92,0,97,0" concept="4" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="5498555192070628034" at="65,5,71,5" concept="11" />
+      <node id="5498555192070720707" at="40,54,47,5" concept="2" />
+      <node id="5498555192070628034" at="74,0,85,0" concept="4" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="5498555192070628034" at="38,0,51,0" concept="10" trace="getScope_id52_Geb4QDV$#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="5498555192070628034" at="60,0,73,0" concept="4" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="5498555192070628034" at="35,63,35,63" />
+      <scope id="5498555192070628034" at="52,47,52,47" />
+      <scope id="5498555192070722976" at="42,166,43,113" />
+      <scope id="5498555192070765132" at="44,173,45,113" />
+      <scope id="5498555192070628034" at="56,114,57,21" />
+      <scope id="5498555192070628034" at="63,26,64,56" />
+      <scope id="5498555192070628034" at="67,13,68,115" />
+      <scope id="5498555192070628034" at="69,14,70,58" />
+      <scope id="5498555192070628034" at="77,26,78,56" />
+      <scope id="5498555192070628034" at="81,14,82,58" />
+      <scope id="5498555192070628034" at="88,48,89,22" />
+      <scope id="5498555192070628034" at="94,40,95,19" />
+      <scope id="5498555192070628034" at="35,0,37,0">
+        <var name="__thisNode__" id="5498555192070628034" />
+      </scope>
+      <scope id="5498555192070628034" at="52,0,54,0" />
+      <scope id="5498555192070628034" at="55,0,59,0">
+        <var name="constructor" id="5498555192070628034" />
+        <var name="node" id="5498555192070628034" />
+        <var name="parameters" id="5498555192070628034" />
+      </scope>
+      <scope id="5498555192070720713" at="41,106,46,7" />
+      <scope id="5498555192070628034" at="86,0,91,0" />
+      <scope id="5498555192070628034" at="92,0,97,0" />
+      <scope id="5498555192070720707" at="40,54,47,5">
+        <var name="node" id="5498555192070720709" />
+      </scope>
+      <scope id="5498555192070628034" at="75,128,83,5">
+        <var name="methodIndex" id="5498555192070628034" />
+      </scope>
+      <scope id="5498555192070628034" at="61,114,71,5">
+        <var name="methodIndex" id="5498555192070628034" />
+      </scope>
+      <scope id="5498555192070647604" at="38,116,49,0">
+        <var name="declarations" id="5498555192070692654" />
+      </scope>
+      <scope id="5498555192070628034" at="74,0,85,0">
+        <var name="concept" id="5498555192070628034" />
+        <var name="method" id="5498555192070628034" />
+        <var name="parameters" id="5498555192070628034" />
+      </scope>
+      <scope id="5498555192070628034" at="38,0,51,0">
+        <var name="__thisNode__" id="5498555192070628034" />
+        <var name="child" id="5498555192070647607" />
+        <var name="kind" id="5498555192070647605" />
+      </scope>
+      <scope id="5498555192070628034" at="60,0,73,0">
+        <var name="method" id="5498555192070628034" />
+        <var name="node" id="5498555192070628034" />
+        <var name="parameters" id="5498555192070628034" />
+      </scope>
+      <unit id="5498555192070628034" at="103,0,106,0" name="ExerciseLanguage.behavior.Worksheet__BehaviorDescriptor$LINKS" />
+      <unit id="5498555192070628034" at="98,0,102,0" name="ExerciseLanguage.behavior.Worksheet__BehaviorDescriptor$CONCEPTS" />
+      <unit id="5498555192070628034" at="28,0,107,0" name="ExerciseLanguage.behavior.Worksheet__BehaviorDescriptor" />
+    </file>
+  </root>
+</debug-info>
+

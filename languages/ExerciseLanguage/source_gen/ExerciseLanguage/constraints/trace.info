@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="ConstraintsAspectDescriptor.java">
+      <unit at="13,0,31,0" name="ExerciseLanguage.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:cdccb337-955c-47f5-9e0b-861587339752(ExerciseLanguage.constraints)/5498555192070475309">
+    <file name="VariableReference_Constraints.java">
+      <node id="5498555192070475309" at="19,42,20,41" concept="6" />
+      <node id="5498555192070475390" at="28,56,29,199" concept="4" />
+      <node id="5498555192070475309" at="31,6,32,131" concept="3" />
+      <node id="5498555192070475390" at="32,131,33,42" concept="1" />
+      <node id="5498555192070475309" at="33,42,34,22" concept="4" />
+      <node id="5498555192070475309" at="38,0,39,0" concept="5" trace="VariableReference$4q" />
+      <node id="5498555192070475309" at="39,0,40,0" concept="5" trace="IVariableDeclaration$sh" />
+      <node id="5498555192070475309" at="43,0,44,0" concept="5" trace="reference$vRxJ" />
+      <node id="5498555192070475309" at="19,0,22,0" concept="0" trace="VariableReference_Constraints#()V" />
+      <node id="5498555192070475390" at="26,0,31,0" concept="2" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="5498555192070475390" at="24,90,31,6" concept="3" />
+      <node id="5498555192070475309" at="23,0,36,0" concept="2" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="5498555192070475309" at="19,42,20,41" />
+      <scope id="5498555192070475390" at="28,56,29,199" />
+      <scope id="5498555192070475309" at="19,0,22,0" />
+      <scope id="5498555192070475390" at="26,0,31,0" />
+      <scope id="5498555192070475309" at="24,90,34,22">
+        <var name="d0" id="5498555192070475390" />
+        <var name="references" id="5498555192070475309" />
+      </scope>
+      <scope id="5498555192070475309" at="23,0,36,0" />
+      <unit id="5498555192070475309" at="42,0,45,0" name="ExerciseLanguage.constraints.VariableReference_Constraints$LINKS" />
+      <unit id="5498555192070475309" at="37,0,41,0" name="ExerciseLanguage.constraints.VariableReference_Constraints$CONCEPTS" />
+      <unit id="5498555192070475390" at="25,48,31,5" name="ExerciseLanguage.constraints.VariableReference_Constraints$1" />
+      <unit id="5498555192070475309" at="18,0,46,0" name="ExerciseLanguage.constraints.VariableReference_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:cdccb337-955c-47f5-9e0b-861587339752(ExerciseLanguage.constraints)/5498555192072398967">
+    <file name="IWorksheetExpression_Constraints.java">
+      <node id="5498555192072398967" at="11,45,12,44" concept="6" />
+      <node id="5498555192072398967" at="16,47,17,33" concept="4" />
+      <node id="5498555192072398967" at="21,0,22,0" concept="5" trace="IWorksheetExpression$8J" />
+      <node id="5498555192072398967" at="22,0,23,0" concept="5" trace="EmptyLine$Mk" />
+      <node id="5498555192072398967" at="11,0,14,0" concept="0" trace="IWorksheetExpression_Constraints#()V" />
+      <node id="5498555192072398967" at="15,0,19,0" concept="2" trace="getDefaultConcreteConcept#()Lorg/jetbrains/mps/openapi/language/SConcept;" />
+      <scope id="5498555192072398967" at="11,45,12,44" />
+      <scope id="5498555192072398967" at="16,47,17,33" />
+      <scope id="5498555192072398967" at="11,0,14,0" />
+      <scope id="5498555192072398967" at="15,0,19,0" />
+      <unit id="5498555192072398967" at="20,0,24,0" name="ExerciseLanguage.constraints.IWorksheetExpression_Constraints$CONCEPTS" />
+      <unit id="5498555192072398967" at="10,0,25,0" name="ExerciseLanguage.constraints.IWorksheetExpression_Constraints" />
+    </file>
+  </root>
+</debug-info>
+
