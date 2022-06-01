@@ -38,7 +38,7 @@ public final class Worksheet__BehaviorDescriptor extends BaseBHDescriptor {
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, SNode child) {
     // this is kind of shit brute force
     List<SNode> declarations = new ArrayList<SNode>();
-    for (SNode node : ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.body$WTbM))) {
+    for (SNode node : ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(__thisNode__, LINKS.body$qfv5), LINKS.body$6yby))) {
       if (SNodeOperations.isInstanceOf(node, CONCEPTS.IntegerDeclaration$CR) && ListSequence.fromList(SNodeOperations.getNextSiblings(node, false)).contains(child)) {
         ListSequence.fromList(declarations).addElement(SNodeOperations.as(node, CONCEPTS.IntegerDeclaration$CR));
       } else if (SNodeOperations.isInstanceOf(node, CONCEPTS.BooleanDeclaration$d1) && ListSequence.fromList(SNodeOperations.getNextSiblings(node, false)).contains(child)) {
@@ -101,6 +101,7 @@ public final class Worksheet__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink body$WTbM = MetaAdapterFactory.getContainmentLink(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f4fL, 0x1beda7bcefca4f55L, "body");
+    /*package*/ static final SContainmentLink body$qfv5 = MetaAdapterFactory.getContainmentLink(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f4fL, 0x5261d8e675c22036L, "body");
+    /*package*/ static final SContainmentLink body$6yby = MetaAdapterFactory.getContainmentLink(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675c22033L, 0x5261d8e675c22034L, "body");
   }
 }

@@ -41,14 +41,15 @@
       <node id="5498555192070628034" at="94,40,95,19" concept="6" />
       <node id="5498555192070628034" at="99,0,100,0" concept="9" trace="IntegerDeclaration$CR" />
       <node id="5498555192070628034" at="100,0,101,0" concept="9" trace="BooleanDeclaration$d1" />
-      <node id="5498555192070628034" at="104,0,105,0" concept="9" trace="body$WTbM" />
+      <node id="5498555192070628034" at="104,0,105,0" concept="9" trace="body$qfv5" />
+      <node id="5498555192070628034" at="105,0,106,0" concept="9" trace="body$6yby" />
       <node id="5498555192070628034" at="35,0,37,0" concept="10" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="5498555192070628034" at="52,0,54,0" concept="0" trace="Worksheet__BehaviorDescriptor#()V" />
       <node id="5498555192070628034" at="62,49,65,5" concept="3" />
       <node id="5498555192070628034" at="76,49,79,5" concept="3" />
       <node id="5498555192070628034" at="55,0,59,0" concept="4" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
       <node id="5498555192070628034" at="79,5,83,5" concept="11" />
-      <node id="5498555192070722974" at="41,106,46,7" concept="3" />
+      <node id="5498555192070722974" at="41,150,46,7" concept="3" />
       <node id="5498555192070628034" at="86,0,91,0" concept="4" trace="getDeclaredMethods#()Ljava/util/List;" />
       <node id="5498555192070628034" at="92,0,97,0" concept="4" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
       <node id="5498555192070628034" at="65,5,71,5" concept="11" />
@@ -77,7 +78,7 @@
         <var name="node" id="5498555192070628034" />
         <var name="parameters" id="5498555192070628034" />
       </scope>
-      <scope id="5498555192070720713" at="41,106,46,7" />
+      <scope id="5498555192070720713" at="41,150,46,7" />
       <scope id="5498555192070628034" at="86,0,91,0" />
       <scope id="5498555192070628034" at="92,0,97,0" />
       <scope id="5498555192070720707" at="40,54,47,5">
@@ -107,9 +108,9 @@
         <var name="node" id="5498555192070628034" />
         <var name="parameters" id="5498555192070628034" />
       </scope>
-      <unit id="5498555192070628034" at="103,0,106,0" name="ExerciseLanguage.behavior.Worksheet__BehaviorDescriptor$LINKS" />
       <unit id="5498555192070628034" at="98,0,102,0" name="ExerciseLanguage.behavior.Worksheet__BehaviorDescriptor$CONCEPTS" />
-      <unit id="5498555192070628034" at="28,0,107,0" name="ExerciseLanguage.behavior.Worksheet__BehaviorDescriptor" />
+      <unit id="5498555192070628034" at="103,0,107,0" name="ExerciseLanguage.behavior.Worksheet__BehaviorDescriptor$LINKS" />
+      <unit id="5498555192070628034" at="28,0,108,0" name="ExerciseLanguage.behavior.Worksheet__BehaviorDescriptor" />
     </file>
   </root>
 </debug-info>

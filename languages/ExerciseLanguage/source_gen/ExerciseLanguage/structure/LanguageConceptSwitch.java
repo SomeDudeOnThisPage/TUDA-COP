@@ -9,27 +9,45 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int BooleanDeclaration = 0;
-  public static final int EmptyLine = 1;
-  public static final int IVariableDeclaration = 2;
-  public static final int IWorksheetDeclaration = 3;
-  public static final int IWorksheetExpression = 4;
-  public static final int IntegerDeclaration = 5;
-  public static final int VariableReference = 6;
-  public static final int Worksheet = 7;
-  public static final int Worksheets = 8;
+  public static final int BinaryExpression = 0;
+  public static final int Block = 1;
+  public static final int BlockExpression = 2;
+  public static final int BooleanDeclaration = 3;
+  public static final int BracketExpression = 4;
+  public static final int EmptyLine = 5;
+  public static final int Expression = 6;
+  public static final int IVariableDeclaration = 7;
+  public static final int IWorksheetDeclaration = 8;
+  public static final int IWorksheetExpression = 9;
+  public static final int IntegerDeclaration = 10;
+  public static final int LiteralExpression = 11;
+  public static final int Operator = 12;
+  public static final int OperatorAdd = 13;
+  public static final int OperatorAssign = 14;
+  public static final int OperatorMultiply = 15;
+  public static final int ReferenceExpression = 16;
+  public static final int Worksheet = 17;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x97a51900650f4519L, 0xa79289e9b2b161cbL);
+    builder.put(0x5261d8e675bb66a4L, BinaryExpression);
+    builder.put(0x5261d8e675c22033L, Block);
+    builder.put(0x5261d8e675d475a7L, BlockExpression);
     builder.put(0x4c4ecad0893cc3b8L, BooleanDeclaration);
+    builder.put(0x761b7b07134f4fe3L, BracketExpression);
     builder.put(0x4c4ecad089585d2aL, EmptyLine);
+    builder.put(0x5261d8e675bc9b1cL, Expression);
     builder.put(0x4c4ecad0893aec5fL, IVariableDeclaration);
     builder.put(0x1beda7bcefca5f4bL, IWorksheetDeclaration);
     builder.put(0x1beda7bcefca4f54L, IWorksheetExpression);
     builder.put(0x4c4ecad0893aec64L, IntegerDeclaration);
-    builder.put(0x4c4ecad0893cc3e0L, VariableReference);
+    builder.put(0x5261d8e675bf57e9L, LiteralExpression);
+    builder.put(0x5261d8e675bc9b1bL, Operator);
+    builder.put(0x5261d8e675bec7b7L, OperatorAdd);
+    builder.put(0x5261d8e675c62f7eL, OperatorAssign);
+    builder.put(0x5261d8e675c90242L, OperatorMultiply);
+    builder.put(0x6930950f81a11a81L, ReferenceExpression);
     builder.put(0x1beda7bcefca4f4fL, Worksheet);
-    builder.put(0x1beda7bcefca4f4eL, Worksheets);
     myIndex = builder.seal();
   }
 

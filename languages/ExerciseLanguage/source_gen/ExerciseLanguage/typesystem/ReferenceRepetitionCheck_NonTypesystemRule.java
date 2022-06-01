@@ -10,32 +10,31 @@ import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class ReferenceRepetitionCheck_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
   public ReferenceRepetitionCheck_NonTypesystemRule() {
   }
-  public void applyRule(final SNode reference, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+  public void applyRule(final SNode declaration, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     // idk theres probably an elegant pre-made solution for this but whatever
-    for (SNode sibling : ListSequence.fromList(SNodeOperations.getPrevSiblings(reference, false))) {
-      if (SNodeOperations.isInstanceOf(sibling, CONCEPTS.VariableReference$4q) && SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.cast(sibling, CONCEPTS.VariableReference$4q), LINKS.reference$vRxJ), PROPS.name$MnvL) == SPropertyOperations.getString(SLinkOperations.getTarget(reference, LINKS.reference$vRxJ), PROPS.name$MnvL)) {
+    for (SNode sibling : ListSequence.fromList(SNodeOperations.getPrevSiblings(declaration, false))) {
+      if (SNodeOperations.isInstanceOf(sibling, CONCEPTS.IntegerDeclaration$CR) && SPropertyOperations.getString(SNodeOperations.cast(sibling, CONCEPTS.IntegerDeclaration$CR), PROPS.name$MnvL).equals(SPropertyOperations.getString(declaration, PROPS.name$MnvL))) {
         {
           final MessageTarget errorTarget = new NodeMessageTarget();
-          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(reference, "The reference of name " + SPropertyOperations.getString(SLinkOperations.getTarget(reference, LINKS.reference$vRxJ), PROPS.name$MnvL) + " is already in use.", "r:596e03c7-07b8-4f47-94c3-e3804da5cccc(ExerciseLanguage.typesystem)", "5498555192071213891", null, errorTarget);
+          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(declaration, "The reference of name '" + SPropertyOperations.getString(declaration, PROPS.name$MnvL) + "' is already in use in this scope.", "r:596e03c7-07b8-4f47-94c3-e3804da5cccc(ExerciseLanguage.typesystem)", "5498555192071213891", null, errorTarget);
         }
       }
     }
   }
   public SAbstractConcept getApplicableConcept() {
-    return CONCEPTS.VariableReference$4q;
+    return CONCEPTS.IVariableDeclaration$sh;
   }
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
     return new IsApplicableStatus(argument.getConcept().isSubConceptOf(getApplicableConcept()), null);
@@ -44,15 +43,12 @@ public class ReferenceRepetitionCheck_NonTypesystemRule extends AbstractNonTypes
     return false;
   }
 
-  private static final class LINKS {
-    /*package*/ static final SReferenceLink reference$vRxJ = MetaAdapterFactory.getReferenceLink(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad0893cc3e0L, 0x4c4ecad0893cc3e3L, "reference");
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept IntegerDeclaration$CR = MetaAdapterFactory.getConcept(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad0893aec64L, "ExerciseLanguage.structure.IntegerDeclaration");
+    /*package*/ static final SInterfaceConcept IVariableDeclaration$sh = MetaAdapterFactory.getInterfaceConcept(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad0893aec5fL, "ExerciseLanguage.structure.IVariableDeclaration");
   }
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-  }
-
-  private static final class CONCEPTS {
-    /*package*/ static final SConcept VariableReference$4q = MetaAdapterFactory.getConcept(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad0893cc3e0L, "ExerciseLanguage.structure.VariableReference");
   }
 }

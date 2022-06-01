@@ -12,58 +12,77 @@
       </concept>
     </language>
     <language id="97a51900-650f-4519-a792-89e9b2b161cb" name="ExerciseLanguage">
-      <concept id="5498555192072232234" name="ExerciseLanguage.structure.EmptyLine" flags="ng" index="355DvU" />
-      <concept id="5498555192070423520" name="ExerciseLanguage.structure.VariableReference" flags="ng" index="35sw$K">
-        <reference id="5498555192070423523" name="reference" index="35sw$N" />
+      <concept id="5936264268180758579" name="ExerciseLanguage.structure.Block" flags="ng" index="BCZzl">
+        <child id="5936264268180758580" name="body" index="BCZzi" />
       </concept>
-      <concept id="5498555192070423480" name="ExerciseLanguage.structure.BooleanDeclaration" flags="ng" index="35sw_C" />
-      <concept id="5498555192070302820" name="ExerciseLanguage.structure.IntegerDeclaration" flags="ng" index="35t2qO" />
-      <concept id="2012449038423183182" name="ExerciseLanguage.structure.Worksheets" flags="ng" index="3O9YzM">
-        <child id="2012449038423183186" name="body" index="3O9YzI" />
+      <concept id="5936264268181209666" name="ExerciseLanguage.structure.OperatorMultiply" flags="ng" index="BEdE$" />
+      <concept id="5936264268180317860" name="ExerciseLanguage.structure.BinaryExpression" flags="ng" index="BQFT2">
+        <child id="5936264268180396834" name="right" index="BRkf4" />
+        <child id="5936264268180396831" name="operator" index="BRkfT" />
+        <child id="5936264268180396829" name="left" index="BRkfV" />
+      </concept>
+      <concept id="5936264268180576233" name="ExerciseLanguage.structure.LiteralExpression" flags="ng" index="BRCWf">
+        <property id="5936264268180576234" name="value" index="BRCWc" />
+      </concept>
+      <concept id="5936264268180539319" name="ExerciseLanguage.structure.OperatorAdd" flags="ng" index="BRLXh" />
+      <concept id="5498555192072232234" name="ExerciseLanguage.structure.EmptyLine" flags="ng" index="355DvU" />
+      <concept id="5498555192070302820" name="ExerciseLanguage.structure.IntegerDeclaration" flags="ng" index="35t2qO">
+        <child id="8510531191165158275" name="expression" index="1_kRy4" />
+      </concept>
+      <concept id="8510531191165636579" name="ExerciseLanguage.structure.BracketExpression" flags="ng" index="1_l3j$">
+        <child id="8510531191165636598" name="expression" index="1_l3jL" />
+      </concept>
+      <concept id="7579722066696411777" name="ExerciseLanguage.structure.ReferenceExpression" flags="ng" index="3C$oYe">
+        <reference id="7579722066696411778" name="reference" index="3C$oYd" />
       </concept>
       <concept id="2012449038423183183" name="ExerciseLanguage.structure.Worksheet" flags="ng" index="3O9YzN">
-        <child id="2012449038423183189" name="body" index="3O9YzD" />
+        <child id="5936264268180758582" name="body" index="BCZzg" />
       </concept>
     </language>
   </registry>
-  <node concept="3O9YzM" id="1JHDVNJM_$I">
-    <node concept="3O9YzN" id="4LeMH29mRiy" role="3O9YzI">
-      <property role="TrG5h" value="w0" />
-      <node concept="35t2qO" id="4LeMH29mRi$" role="3O9YzD">
+  <node concept="3O9YzN" id="59xQepPKQem">
+    <property role="TrG5h" value="w0" />
+    <node concept="BCZzl" id="59xQepPKQen" role="BCZzg">
+      <node concept="35t2qO" id="7oruKsjja0P" role="BCZzi">
         <property role="TrG5h" value="i" />
-      </node>
-      <node concept="35t2qO" id="4LeMH29mRiD" role="3O9YzD">
-        <property role="TrG5h" value="j" />
-      </node>
-      <node concept="35sw$K" id="4LeMH29mRiL" role="3O9YzD">
-        <ref role="35sw$N" node="4LeMH29mRi$" resolve="i" />
-      </node>
-      <node concept="35sw_C" id="4LeMH29mRiV" role="3O9YzD">
-        <property role="TrG5h" value="b" />
-      </node>
-      <node concept="355DvU" id="4LeMH29mRj1" role="3O9YzD" />
-      <node concept="35sw$K" id="4LeMH29mRjy" role="3O9YzD">
-        <ref role="35sw$N" node="4LeMH29mRiV" resolve="b" />
-      </node>
-      <node concept="35sw$K" id="4LeMH29mRjM" role="3O9YzD">
-        <ref role="35sw$N" node="4LeMH29mRi$" resolve="i" />
-      </node>
-      <node concept="355DvU" id="4LeMH29mRjV" role="3O9YzD" />
-      <node concept="3O9YzN" id="4LeMH29mRke" role="3O9YzD">
-        <property role="TrG5h" value="w01" />
-        <node concept="35t2qO" id="4LeMH29mRkr" role="3O9YzD">
-          <property role="TrG5h" value="i" />
+        <node concept="BRCWf" id="7oruKsjja0T" role="1_kRy4">
+          <property role="BRCWc" value="22" />
         </node>
-        <node concept="35sw$K" id="4LeMH29mRkx" role="3O9YzD" />
       </node>
-    </node>
-    <node concept="3O9YzN" id="4LeMH29mRk_" role="3O9YzI">
-      <property role="TrG5h" value="w1" />
-      <node concept="35t2qO" id="4LeMH29mRkV" role="3O9YzD">
-        <property role="TrG5h" value="i" />
+      <node concept="35t2qO" id="7oruKsjjkMP" role="BCZzi">
+        <property role="TrG5h" value="j" />
+        <node concept="BQFT2" id="7oruKsjjkMX" role="1_kRy4">
+          <node concept="BRCWf" id="7oruKsjjkN9" role="BRkfV">
+            <property role="BRCWc" value="22" />
+          </node>
+          <node concept="BRLXh" id="7oruKsjjkNc" role="BRkfT" />
+          <node concept="BRCWf" id="7oruKsjjkNf" role="BRkf4">
+            <property role="BRCWc" value="33" />
+          </node>
+        </node>
       </node>
-      <node concept="35sw$K" id="4LeMH29mRkP" role="3O9YzD">
-        <ref role="35sw$N" node="4LeMH29mRkV" resolve="i" />
+      <node concept="355DvU" id="7oruKsjjEkH" role="BCZzi" />
+      <node concept="35t2qO" id="7oruKsjjEk6" role="BCZzi">
+        <property role="TrG5h" value="k" />
+        <node concept="1_l3j$" id="7oruKsjjZLX" role="1_kRy4">
+          <node concept="BQFT2" id="7oruKsjjZM8" role="1_l3jL">
+            <node concept="3C$oYe" id="7oruKsjjZMk" role="BRkfV">
+              <ref role="3C$oYd" node="7oruKsjja0P" resolve="i" />
+            </node>
+            <node concept="BRLXh" id="7oruKsjjZMn" role="BRkfT" />
+            <node concept="1_l3j$" id="7oruKsjjZMK" role="BRkf4">
+              <node concept="BQFT2" id="7oruKsjjZMQ" role="1_l3jL">
+                <node concept="3C$oYe" id="7oruKsjka$D" role="BRkfV">
+                  <ref role="3C$oYd" node="7oruKsjjkMP" resolve="j" />
+                </node>
+                <node concept="BEdE$" id="7oruKsjka$G" role="BRkfT" />
+                <node concept="BRCWf" id="7oruKsjka$J" role="BRkf4">
+                  <property role="BRCWc" value="25" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
   </node>

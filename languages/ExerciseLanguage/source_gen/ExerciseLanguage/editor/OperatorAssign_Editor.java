@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class Worksheets_Editor extends DefaultNodeEditor {
+public class OperatorAssign_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new Worksheets_EditorBuilder_a(editorContext, node).createCell();
+    return new OperatorAssign_EditorBuilder_a(editorContext, node).createCell();
   }
 }

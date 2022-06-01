@@ -8,9 +8,11 @@
   <imports>
     <import index="6tq9" ref="r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
         <child id="1154032183016" name="body" index="2LFqv$" />
       </concept>
@@ -21,7 +23,6 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
-      <concept id="1068580123152" name="jetbrains.mps.baseLanguage.structure.EqualsExpression" flags="nn" index="3clFbC" />
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
@@ -30,6 +31,10 @@
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
       <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
+      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
+        <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
+        <child id="1068499141038" name="actualArgument" index="37wK5m" />
+      </concept>
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
@@ -75,9 +80,6 @@
       <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI" />
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
-      </concept>
-      <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
-        <reference id="1138056516764" name="link" index="3Tt5mk" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -157,36 +159,29 @@
         <node concept="3clFbS" id="4LeMH29i7uf" role="2LFqv$">
           <node concept="3clFbJ" id="4LeMH29i7Vx" role="3cqZAp">
             <node concept="1Wc70l" id="4LeMH29i9_d" role="3clFbw">
-              <node concept="3clFbC" id="4LeMH29icfo" role="3uHU7w">
-                <node concept="2OqwBi" id="4LeMH29id5G" role="3uHU7w">
-                  <node concept="2OqwBi" id="4LeMH29icMW" role="2Oq$k0">
-                    <node concept="1YBJjd" id="4LeMH29icub" role="2Oq$k0">
-                      <ref role="1YBMHb" node="4LeMH29i6nD" resolve="reference" />
+              <node concept="2OqwBi" id="59xQepPOwFB" role="3uHU7w">
+                <node concept="2OqwBi" id="4LeMH29ib2T" role="2Oq$k0">
+                  <node concept="1PxgMI" id="4LeMH29i9Qc" role="2Oq$k0">
+                    <node concept="2GrUjf" id="4LeMH29i9Ar" role="1m5AlR">
+                      <ref role="2Gs0qQ" node="4LeMH29i7ud" resolve="sibling" />
                     </node>
-                    <node concept="3TrEf2" id="4LeMH29icQd" role="2OqNvi">
-                      <ref role="3Tt5mk" to="6tq9:4LeMH29fcfz" resolve="reference" />
-                    </node>
-                  </node>
-                  <node concept="3TrcHB" id="4LeMH29idbe" role="2OqNvi">
-                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                  </node>
-                </node>
-                <node concept="2OqwBi" id="4LeMH29ib2T" role="3uHU7B">
-                  <node concept="2OqwBi" id="4LeMH29ia5u" role="2Oq$k0">
-                    <node concept="1PxgMI" id="4LeMH29i9Qc" role="2Oq$k0">
-                      <node concept="chp4Y" id="4LeMH29i9V6" role="3oSUPX">
-                        <ref role="cht4Q" to="6tq9:4LeMH29fcfw" resolve="VariableReference" />
-                      </node>
-                      <node concept="2GrUjf" id="4LeMH29i9Ar" role="1m5AlR">
-                        <ref role="2Gs0qQ" node="4LeMH29i7ud" resolve="sibling" />
-                      </node>
-                    </node>
-                    <node concept="3TrEf2" id="4LeMH29iaGj" role="2OqNvi">
-                      <ref role="3Tt5mk" to="6tq9:4LeMH29fcfz" resolve="reference" />
+                    <node concept="chp4Y" id="59xQepPMHnO" role="3oSUPX">
+                      <ref role="cht4Q" to="6tq9:4LeMH29eIL$" resolve="IntegerDeclaration" />
                     </node>
                   </node>
                   <node concept="3TrcHB" id="4LeMH29ibyH" role="2OqNvi">
                     <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="59xQepPOxqw" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object)" resolve="equals" />
+                  <node concept="2OqwBi" id="59xQepPOy53" role="37wK5m">
+                    <node concept="1YBJjd" id="59xQepPOxB$" role="2Oq$k0">
+                      <ref role="1YBMHb" node="4LeMH29i6nD" resolve="integerDeclaration" />
+                    </node>
+                    <node concept="3TrcHB" id="59xQepPOynH" role="2OqNvi">
+                      <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                    </node>
                   </node>
                 </node>
               </node>
@@ -196,7 +191,7 @@
                 </node>
                 <node concept="1mIQ4w" id="4LeMH29i8ri" role="2OqNvi">
                   <node concept="chp4Y" id="4LeMH29i8tH" role="cj9EA">
-                    <ref role="cht4Q" to="6tq9:4LeMH29fcfw" resolve="VariableReference" />
+                    <ref role="cht4Q" to="6tq9:4LeMH29eIL$" resolve="IntegerDeclaration" />
                   </node>
                 </node>
               </node>
@@ -205,20 +200,15 @@
               <node concept="2MkqsV" id="4LeMH29idd3" role="3cqZAp">
                 <node concept="3cpWs3" id="4LeMH29ig2v" role="2MkJ7o">
                   <node concept="Xl_RD" id="4LeMH29ig58" role="3uHU7w">
-                    <property role="Xl_RC" value=" is already in use." />
+                    <property role="Xl_RC" value="' is already in use in this scope." />
                   </node>
                   <node concept="3cpWs3" id="4LeMH29idM3" role="3uHU7B">
                     <node concept="Xl_RD" id="4LeMH29iddi" role="3uHU7B">
-                      <property role="Xl_RC" value="The reference of name " />
+                      <property role="Xl_RC" value="The reference of name '" />
                     </node>
                     <node concept="2OqwBi" id="4LeMH29ieQi" role="3uHU7w">
-                      <node concept="2OqwBi" id="4LeMH29idYQ" role="2Oq$k0">
-                        <node concept="1YBJjd" id="4LeMH29idMl" role="2Oq$k0">
-                          <ref role="1YBMHb" node="4LeMH29i6nD" resolve="reference" />
-                        </node>
-                        <node concept="3TrEf2" id="4LeMH29ieBN" role="2OqNvi">
-                          <ref role="3Tt5mk" to="6tq9:4LeMH29fcfz" resolve="reference" />
-                        </node>
+                      <node concept="1YBJjd" id="4LeMH29idMl" role="2Oq$k0">
+                        <ref role="1YBMHb" node="4LeMH29i6nD" resolve="declaration" />
                       </node>
                       <node concept="3TrcHB" id="4LeMH29ifmD" role="2OqNvi">
                         <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
@@ -236,8 +226,8 @@
       </node>
     </node>
     <node concept="1YaCAy" id="4LeMH29i6nD" role="1YuTPh">
-      <property role="TrG5h" value="reference" />
-      <ref role="1YaFvo" to="6tq9:4LeMH29fcfw" resolve="VariableReference" />
+      <property role="TrG5h" value="declaration" />
+      <ref role="1YaFvo" to="6tq9:4LeMH29g3NR" resolve="IVariableDeclaration" />
     </node>
   </node>
 </model>

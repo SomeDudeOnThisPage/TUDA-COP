@@ -17,52 +17,51 @@
   </root>
   <root nodeRef="r:596e03c7-07b8-4f47-94c3-e3804da5cccc(ExerciseLanguage.typesystem)/5498555192071185894">
     <file name="ReferenceRepetitionCheck_NonTypesystemRule.java">
-      <node id="5498555192071574931" at="26,122,27,77" concept="8" />
-      <node id="5498555192071213891" at="30,9,31,68" concept="6" />
-      <node id="5498555192071213891" at="31,68,32,367" concept="6" />
-      <node id="5498555192071185894" at="37,50,38,41" concept="7" />
-      <node id="5498555192071185894" at="40,68,41,102" concept="7" />
-      <node id="5498555192071185894" at="43,30,44,17" concept="7" />
-      <node id="5498555192071185894" at="48,0,49,0" concept="9" trace="reference$vRxJ" />
+      <node id="5498555192071574931" at="25,124,26,77" concept="8" />
+      <node id="5498555192071213891" at="29,9,30,68" concept="6" />
+      <node id="5498555192071213891" at="30,68,31,338" concept="6" />
+      <node id="5498555192071185894" at="36,50,37,44" concept="7" />
+      <node id="5498555192071185894" at="39,68,40,102" concept="7" />
+      <node id="5498555192071185894" at="42,30,43,17" concept="7" />
+      <node id="5498555192071185894" at="47,0,48,0" concept="9" trace="IntegerDeclaration$CR" />
+      <node id="5498555192071185894" at="48,0,49,0" concept="9" trace="IVariableDeclaration$sh" />
       <node id="5498555192071185894" at="52,0,53,0" concept="9" trace="name$MnvL" />
-      <node id="5498555192071185894" at="56,0,57,0" concept="9" trace="VariableReference$4q" />
-      <node id="5498555192071185894" at="24,0,26,0" concept="1" trace="ReferenceRepetitionCheck_NonTypesystemRule#()V" />
-      <node id="5498555192071185894" at="37,0,40,0" concept="5" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
-      <node id="5498555192071185894" at="40,0,43,0" concept="5" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-      <node id="5498555192071185894" at="43,0,46,0" concept="5" trace="overrides#()Z" />
-      <node id="5498555192071213891" at="29,352,33,9" concept="0" />
-      <node id="5498555192071192289" at="28,100,34,7" concept="4" />
-      <node id="5498555192071190412" at="27,77,35,5" concept="3" />
-      <node id="5498555192071185894" at="26,0,37,0" concept="5" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
-      <scope id="5498555192071185894" at="24,55,24,55" />
-      <scope id="5498555192071185894" at="37,50,38,41" />
-      <scope id="5498555192071185894" at="40,68,41,102" />
-      <scope id="5498555192071185894" at="43,30,44,17" />
-      <scope id="5498555192071185894" at="24,0,26,0" />
-      <scope id="5498555192071213891" at="30,9,32,367">
+      <node id="5498555192071185894" at="23,0,25,0" concept="1" trace="ReferenceRepetitionCheck_NonTypesystemRule#()V" />
+      <node id="5498555192071185894" at="36,0,39,0" concept="5" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="5498555192071185894" at="39,0,42,0" concept="5" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="5498555192071185894" at="42,0,45,0" concept="5" trace="overrides#()Z" />
+      <node id="5498555192071213891" at="28,263,32,9" concept="0" />
+      <node id="5498555192071192289" at="27,102,33,7" concept="4" />
+      <node id="5498555192071190412" at="26,77,34,5" concept="3" />
+      <node id="5498555192071185894" at="25,0,36,0" concept="5" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="5498555192071185894" at="23,55,23,55" />
+      <scope id="5498555192071185894" at="36,50,37,44" />
+      <scope id="5498555192071185894" at="39,68,40,102" />
+      <scope id="5498555192071185894" at="42,30,43,17" />
+      <scope id="5498555192071185894" at="23,0,25,0" />
+      <scope id="5498555192071213891" at="29,9,31,338">
         <var name="_reporter_2309309498" id="5498555192071213891" />
         <var name="errorTarget" id="5498555192071213891" />
       </scope>
-      <scope id="5498555192071185894" at="37,0,40,0" />
-      <scope id="5498555192071185894" at="40,0,43,0">
+      <scope id="5498555192071185894" at="36,0,39,0" />
+      <scope id="5498555192071185894" at="39,0,42,0">
         <var name="argument" id="5498555192071185894" />
       </scope>
-      <scope id="5498555192071185894" at="43,0,46,0" />
-      <scope id="5498555192071192291" at="29,352,33,9" />
-      <scope id="5498555192071190415" at="28,100,34,7" />
-      <scope id="5498555192071190412" at="27,77,35,5">
+      <scope id="5498555192071185894" at="42,0,45,0" />
+      <scope id="5498555192071192291" at="28,263,32,9" />
+      <scope id="5498555192071190415" at="27,102,33,7" />
+      <scope id="5498555192071190412" at="26,77,34,5">
         <var name="sibling" id="5498555192071190413" />
       </scope>
-      <scope id="5498555192071185895" at="26,122,35,5" />
-      <scope id="5498555192071185894" at="26,0,37,0">
-        <var name="reference" id="5498555192071185894" />
+      <scope id="5498555192071185895" at="25,124,34,5" />
+      <scope id="5498555192071185894" at="25,0,36,0">
+        <var name="declaration" id="5498555192071185894" />
         <var name="status" id="5498555192071185894" />
         <var name="typeCheckingContext" id="5498555192071185894" />
       </scope>
-      <unit id="5498555192071185894" at="47,0,50,0" name="ExerciseLanguage.typesystem.ReferenceRepetitionCheck_NonTypesystemRule$LINKS" />
       <unit id="5498555192071185894" at="51,0,54,0" name="ExerciseLanguage.typesystem.ReferenceRepetitionCheck_NonTypesystemRule$PROPS" />
-      <unit id="5498555192071185894" at="55,0,58,0" name="ExerciseLanguage.typesystem.ReferenceRepetitionCheck_NonTypesystemRule$CONCEPTS" />
-      <unit id="5498555192071185894" at="23,0,59,0" name="ExerciseLanguage.typesystem.ReferenceRepetitionCheck_NonTypesystemRule" />
+      <unit id="5498555192071185894" at="46,0,50,0" name="ExerciseLanguage.typesystem.ReferenceRepetitionCheck_NonTypesystemRule$CONCEPTS" />
+      <unit id="5498555192071185894" at="22,0,55,0" name="ExerciseLanguage.typesystem.ReferenceRepetitionCheck_NonTypesystemRule" />
     </file>
     <file name="TypesystemDescriptor.java">
       <node id="5498555192071185894" at="10,5,11,101" concept="6" />

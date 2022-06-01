@@ -10,17 +10,27 @@ import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
+import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptBinaryExpression = createDescriptorForBinaryExpression();
+  /*package*/ final ConceptDescriptor myConceptBlock = createDescriptorForBlock();
+  /*package*/ final ConceptDescriptor myConceptBlockExpression = createDescriptorForBlockExpression();
   /*package*/ final ConceptDescriptor myConceptBooleanDeclaration = createDescriptorForBooleanDeclaration();
+  /*package*/ final ConceptDescriptor myConceptBracketExpression = createDescriptorForBracketExpression();
   /*package*/ final ConceptDescriptor myConceptEmptyLine = createDescriptorForEmptyLine();
+  /*package*/ final ConceptDescriptor myConceptExpression = createDescriptorForExpression();
   /*package*/ final ConceptDescriptor myConceptIVariableDeclaration = createDescriptorForIVariableDeclaration();
   /*package*/ final ConceptDescriptor myConceptIWorksheetDeclaration = createDescriptorForIWorksheetDeclaration();
   /*package*/ final ConceptDescriptor myConceptIWorksheetExpression = createDescriptorForIWorksheetExpression();
   /*package*/ final ConceptDescriptor myConceptIntegerDeclaration = createDescriptorForIntegerDeclaration();
-  /*package*/ final ConceptDescriptor myConceptVariableReference = createDescriptorForVariableReference();
+  /*package*/ final ConceptDescriptor myConceptLiteralExpression = createDescriptorForLiteralExpression();
+  /*package*/ final ConceptDescriptor myConceptOperator = createDescriptorForOperator();
+  /*package*/ final ConceptDescriptor myConceptOperatorAdd = createDescriptorForOperatorAdd();
+  /*package*/ final ConceptDescriptor myConceptOperatorAssign = createDescriptorForOperatorAssign();
+  /*package*/ final ConceptDescriptor myConceptOperatorMultiply = createDescriptorForOperatorMultiply();
+  /*package*/ final ConceptDescriptor myConceptReferenceExpression = createDescriptorForReferenceExpression();
   /*package*/ final ConceptDescriptor myConceptWorksheet = createDescriptorForWorksheet();
-  /*package*/ final ConceptDescriptor myConceptWorksheets = createDescriptorForWorksheets();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -35,17 +45,27 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptBooleanDeclaration, myConceptEmptyLine, myConceptIVariableDeclaration, myConceptIWorksheetDeclaration, myConceptIWorksheetExpression, myConceptIntegerDeclaration, myConceptVariableReference, myConceptWorksheet, myConceptWorksheets);
+    return Arrays.asList(myConceptBinaryExpression, myConceptBlock, myConceptBlockExpression, myConceptBooleanDeclaration, myConceptBracketExpression, myConceptEmptyLine, myConceptExpression, myConceptIVariableDeclaration, myConceptIWorksheetDeclaration, myConceptIWorksheetExpression, myConceptIntegerDeclaration, myConceptLiteralExpression, myConceptOperator, myConceptOperatorAdd, myConceptOperatorAssign, myConceptOperatorMultiply, myConceptReferenceExpression, myConceptWorksheet);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.BinaryExpression:
+        return myConceptBinaryExpression;
+      case LanguageConceptSwitch.Block:
+        return myConceptBlock;
+      case LanguageConceptSwitch.BlockExpression:
+        return myConceptBlockExpression;
       case LanguageConceptSwitch.BooleanDeclaration:
         return myConceptBooleanDeclaration;
+      case LanguageConceptSwitch.BracketExpression:
+        return myConceptBracketExpression;
       case LanguageConceptSwitch.EmptyLine:
         return myConceptEmptyLine;
+      case LanguageConceptSwitch.Expression:
+        return myConceptExpression;
       case LanguageConceptSwitch.IVariableDeclaration:
         return myConceptIVariableDeclaration;
       case LanguageConceptSwitch.IWorksheetDeclaration:
@@ -54,12 +74,20 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptIWorksheetExpression;
       case LanguageConceptSwitch.IntegerDeclaration:
         return myConceptIntegerDeclaration;
-      case LanguageConceptSwitch.VariableReference:
-        return myConceptVariableReference;
+      case LanguageConceptSwitch.LiteralExpression:
+        return myConceptLiteralExpression;
+      case LanguageConceptSwitch.Operator:
+        return myConceptOperator;
+      case LanguageConceptSwitch.OperatorAdd:
+        return myConceptOperatorAdd;
+      case LanguageConceptSwitch.OperatorAssign:
+        return myConceptOperatorAssign;
+      case LanguageConceptSwitch.OperatorMultiply:
+        return myConceptOperatorMultiply;
+      case LanguageConceptSwitch.ReferenceExpression:
+        return myConceptReferenceExpression;
       case LanguageConceptSwitch.Worksheet:
         return myConceptWorksheet;
-      case LanguageConceptSwitch.Worksheets:
-        return myConceptWorksheets;
       default:
         return null;
     }
@@ -70,13 +98,57 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForBinaryExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "BinaryExpression", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bb66a4L);
+    b.class_(false, false, false);
+    // extends: ExerciseLanguage.structure.Expression
+    b.super_(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1cL);
+    b.parent(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L);
+    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5936264268180317860");
+    b.version(3);
+    b.aggregate("left", 0x5261d8e675bc9b1dL).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1cL).optional(false).ordered(true).multiple(false).origin("5936264268180396829").done();
+    b.aggregate("operator", 0x5261d8e675bc9b1fL).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1bL).optional(false).ordered(true).multiple(false).origin("5936264268180396831").done();
+    b.aggregate("right", 0x5261d8e675bc9b22L).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1cL).optional(false).ordered(true).multiple(false).origin("5936264268180396834").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForBlock() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "Block", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675c22033L);
+    b.class_(false, false, false);
+    b.parent(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L);
+    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5936264268180758579");
+    b.version(3);
+    b.aggregate("body", 0x5261d8e675c22034L).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L).optional(true).ordered(true).multiple(true).origin("5936264268180758580").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForBlockExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "BlockExpression", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675d475a7L);
+    b.class_(false, false, false);
+    b.parent(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L);
+    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5936264268181960103");
+    b.version(3);
+    b.aggregate("block", 0x5261d8e675d475a8L).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675c22033L).optional(false).ordered(true).multiple(false).origin("5936264268181960104").done();
+    b.alias("do");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForBooleanDeclaration() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "BooleanDeclaration", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad0893cc3b8L);
     b.class_(false, false, false);
     b.parent(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad0893aec5fL);
     b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5498555192070423480");
     b.version(3);
-    b.alias("boolean");
+    b.aggregate("expression", 0x761b7b0713480385L).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1cL).optional(false).ordered(true).multiple(false).origin("8510531191165158277").done();
+    b.alias("boo");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForBracketExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "BracketExpression", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x761b7b07134f4fe3L);
+    b.class_(false, false, false);
+    // extends: ExerciseLanguage.structure.Expression
+    b.super_(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1cL);
+    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/8510531191165636579");
+    b.version(3);
+    b.aggregate("expression", 0x761b7b07134f4ff6L).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1cL).optional(false).ordered(true).multiple(false).origin("8510531191165636598").done();
+    b.alias("(");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForEmptyLine() {
@@ -84,6 +156,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.parent(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L);
     b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5498555192072232234");
+    b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "Expression", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1cL);
+    b.class_(false, true, false);
+    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5936264268180396828");
     b.version(3);
     return b.create();
   }
@@ -119,38 +198,76 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad0893aec5fL);
     b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5498555192070302820");
     b.version(3);
+    b.aggregate("expression", 0x761b7b0713480383L).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1cL).optional(false).ordered(true).multiple(false).origin("8510531191165158275").done();
     b.alias("int");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForVariableReference() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "VariableReference", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad0893cc3e0L);
+  private static ConceptDescriptor createDescriptorForLiteralExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "LiteralExpression", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bf57e9L);
     b.class_(false, false, false);
-    b.parent(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L);
-    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5498555192070423520");
+    // extends: ExerciseLanguage.structure.Expression
+    b.super_(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1cL);
+    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5936264268180576233");
     b.version(3);
-    b.associate("reference", 0x4c4ecad0893cc3e3L).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad0893aec5fL).optional(true).origin("5498555192070423523").done();
-    b.alias("ref");
+    b.property("value", 0x5261d8e675bf57eaL).type(PrimitiveTypeId.INTEGER).origin("5936264268180576234").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOperator() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "Operator", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1bL);
+    b.class_(false, true, false);
+    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5936264268180396827");
+    b.version(3);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOperatorAdd() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "OperatorAdd", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bec7b7L);
+    b.class_(false, false, false);
+    // extends: ExerciseLanguage.structure.Operator
+    b.super_(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1bL);
+    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5936264268180539319");
+    b.version(3);
+    b.alias("+");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOperatorAssign() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "OperatorAssign", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675c62f7eL);
+    b.class_(false, false, false);
+    // extends: ExerciseLanguage.structure.Operator
+    b.super_(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1bL);
+    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5936264268181024638");
+    b.version(3);
+    b.alias("=");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOperatorMultiply() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "OperatorMultiply", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675c90242L);
+    b.class_(false, false, false);
+    // extends: ExerciseLanguage.structure.Operator
+    b.super_(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1bL);
+    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/5936264268181209666");
+    b.version(3);
+    b.alias("*");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForReferenceExpression() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "ReferenceExpression", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x6930950f81a11a81L);
+    b.class_(false, false, false);
+    // extends: ExerciseLanguage.structure.Expression
+    b.super_(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1cL);
+    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/7579722066696411777");
+    b.version(3);
+    b.associate("reference", 0x6930950f81a11a82L).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad0893aec5fL).optional(false).origin("7579722066696411778").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForWorksheet() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "Worksheet", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f4fL);
-    b.class_(false, false, false);
+    b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
-    b.parent(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L);
     b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/2012449038423183183");
     b.version(3);
-    b.aggregate("body", 0x1beda7bcefca4f55L).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L).optional(true).ordered(true).multiple(true).origin("2012449038423183189").done();
+    b.aggregate("body", 0x5261d8e675c22036L).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675c22033L).optional(false).ordered(true).multiple(false).origin("5936264268180758582").done();
     b.alias("worksheet");
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForWorksheets() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ExerciseLanguage", "Worksheets", 0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f4eL);
-    b.class_(false, false, true);
-    b.origin("r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)/2012449038423183182");
-    b.version(3);
-    b.aggregate("body", 0x1beda7bcefca4f52L).target(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f4fL).optional(false).ordered(true).multiple(true).origin("2012449038423183186").done();
-    b.alias("worksheets");
     return b.create();
   }
 }
