@@ -11,17 +11,19 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_BinaryExpression;
   private ConceptPresentation props_Block;
-  private ConceptPresentation props_BlockExpression;
+  private ConceptPresentation props_BlockWorksheet;
   private ConceptPresentation props_BooleanDeclaration;
   private ConceptPresentation props_BracketExpression;
+  private ConceptPresentation props_Class;
   private ConceptPresentation props_EmptyLine;
   private ConceptPresentation props_Expression;
+  private ConceptPresentation props_FunctionArgument;
   private ConceptPresentation props_FunctionDeclaration;
   private ConceptPresentation props_FunctionExpression;
   private ConceptPresentation props_FunctionParameter;
+  private ConceptPresentation props_IClassExpression;
   private ConceptPresentation props_IVariableDeclaration;
   private ConceptPresentation props_IWorksheetDeclaration;
-  private ConceptPresentation props_IWorksheetExpression;
   private ConceptPresentation props_IntegerDeclaration;
   private ConceptPresentation props_LiteralExpression;
   private ConceptPresentation props_Operator;
@@ -50,13 +52,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Block = cpb.create();
         }
         return props_Block;
-      case LanguageConceptSwitch.BlockExpression:
-        if (props_BlockExpression == null) {
+      case LanguageConceptSwitch.BlockWorksheet:
+        if (props_BlockWorksheet == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("do");
-          props_BlockExpression = cpb.create();
+          cpb.rawPresentation("BlockWorksheet");
+          props_BlockWorksheet = cpb.create();
         }
-        return props_BlockExpression;
+        return props_BlockWorksheet;
       case LanguageConceptSwitch.BooleanDeclaration:
         if (props_BooleanDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -71,6 +73,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BracketExpression = cpb.create();
         }
         return props_BracketExpression;
+      case LanguageConceptSwitch.Class:
+        if (props_Class == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("hallihallo");
+          cpb.presentationByName();
+          props_Class = cpb.create();
+        }
+        return props_Class;
       case LanguageConceptSwitch.EmptyLine:
         if (props_EmptyLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -84,6 +94,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Expression = cpb.create();
         }
         return props_Expression;
+      case LanguageConceptSwitch.FunctionArgument:
+        if (props_FunctionArgument == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("FunctionArgument");
+          props_FunctionArgument = cpb.create();
+        }
+        return props_FunctionArgument;
       case LanguageConceptSwitch.FunctionDeclaration:
         if (props_FunctionDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -95,7 +112,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.FunctionExpression:
         if (props_FunctionExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("FunctionExpression");
+          cpb.presentationByReference(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x304de020ebceefa4L, 0x39275cb10e71ab9cL, "function", "", "");
           props_FunctionExpression = cpb.create();
         }
         return props_FunctionExpression;
@@ -106,6 +123,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_FunctionParameter = cpb.create();
         }
         return props_FunctionParameter;
+      case LanguageConceptSwitch.IClassExpression:
+        if (props_IClassExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IClassExpression = cpb.create();
+        }
+        return props_IClassExpression;
       case LanguageConceptSwitch.IVariableDeclaration:
         if (props_IVariableDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -118,12 +141,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IWorksheetDeclaration = cpb.create();
         }
         return props_IWorksheetDeclaration;
-      case LanguageConceptSwitch.IWorksheetExpression:
-        if (props_IWorksheetExpression == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_IWorksheetExpression = cpb.create();
-        }
-        return props_IWorksheetExpression;
       case LanguageConceptSwitch.IntegerDeclaration:
         if (props_IntegerDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

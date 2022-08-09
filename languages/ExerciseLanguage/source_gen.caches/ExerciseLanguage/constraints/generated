@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-8l2toxefe5nf17xmhvlil9hr3vte92o">
-  <files names="ConstraintsAspectDescriptor.java:IWorksheetExpression_Constraints.java" />
+<product version="3" modelHash="5mosv9brup2uosil1a83g9k4jtyesur">
+  <files names="ConstraintsAspectDescriptor.java:IClassExpression_Constraints.java:ReferenceExpression_Constraints.java" />
 </product>
 

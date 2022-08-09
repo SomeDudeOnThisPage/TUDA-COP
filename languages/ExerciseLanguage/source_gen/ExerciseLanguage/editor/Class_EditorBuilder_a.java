@@ -9,8 +9,7 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
-import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
-import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.openapi.editor.menus.transformation.SPropertyInfo;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Property;
@@ -35,11 +34,11 @@ import jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-/*package*/ class Worksheet_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class Class_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public Worksheet_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public Class_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -56,30 +55,22 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
-    editorCell.setCellId("Collection_vqvsb3_a");
+    editorCell.setCellId("Collection_rerokq_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createCollection_1());
-    return editorCell;
-  }
-  private EditorCell createCollection_1() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
-    editorCell.setCellId("Collection_vqvsb3_a0");
-    editorCell.addEditorCell(createCollection_2());
     editorCell.addEditorCell(createRefNode_0());
     return editorCell;
   }
-  private EditorCell createCollection_2() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_vqvsb3_a0a");
-    editorCell.addEditorCell(createConstant_0());
+  private EditorCell createCollection_1() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
+    editorCell.setCellId("Collection_rerokq_a0");
+    editorCell.addEditorCell(createComponent_0());
     editorCell.addEditorCell(createProperty_0());
     return editorCell;
   }
-  private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "worksheet");
-    editorCell.setCellId("Constant_vqvsb3_a0a0");
-    editorCell.setDefaultText("");
+  private EditorCell createComponent_0() {
+    EditorCell editorCell = getCellFactory().createEditorComponentCell(myNode, "jetbrains.mps.lang.core.editor.alias");
     return editorCell;
   }
   private EditorCell createProperty_0() {
@@ -108,14 +99,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new bodySingleRoleHandler_vqvsb3_b0a(myNode, LINKS.body$Lu6u, getEditorContext());
+    SingleRoleCellProvider provider = new bodySingleRoleHandler_rerokq_b0(myNode, LINKS.body$pjQc, getEditorContext());
     return provider.createCell();
   }
-  private static class bodySingleRoleHandler_vqvsb3_b0a extends SingleRoleCellProvider {
+  private static class bodySingleRoleHandler_rerokq_b0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public bodySingleRoleHandler_vqvsb3_b0a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public bodySingleRoleHandler_rerokq_b0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -128,8 +119,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.body$Lu6u, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.body$Lu6u, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.body$pjQc, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.body$pjQc, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -141,13 +132,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.body$Lu6u);
+        editorCell.setSRole(LINKS.body$pjQc);
       }
     }
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.body$Lu6u));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.body$pjQc));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_body");
@@ -172,6 +163,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink body$Lu6u = MetaAdapterFactory.getContainmentLink(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f4fL, 0x39275cb10e6e142aL, "body");
+    /*package*/ static final SContainmentLink body$pjQc = MetaAdapterFactory.getContainmentLink(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x39275cb10e6e1429L, 0x39275cb10e6e1460L, "body");
   }
 }

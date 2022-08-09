@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class BlockExpression_Editor extends DefaultNodeEditor {
+public class Class_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new BlockExpression_EditorBuilder_a(editorContext, node).createCell();
+    return new Class_EditorBuilder_a(editorContext, node).createCell();
   }
 }

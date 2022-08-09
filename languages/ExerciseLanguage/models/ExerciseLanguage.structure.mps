@@ -60,23 +60,23 @@
     <node concept="PrWs8" id="4LeMH29g5Kr" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
-    <node concept="1TJgyj" id="59xQepPKy0Q" role="1TKVEi">
-      <property role="IQ2ns" value="5936264268180758582" />
+    <node concept="1TJgyj" id="3$Bnb4erxgE" role="1TKVEi">
+      <property role="IQ2ns" value="4118362299774669866" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="body" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="59xQepPKy0N" resolve="Block" />
+      <ref role="20lvS9" node="3$Bnb4erRd6" resolve="BlockWorksheet" />
     </node>
   </node>
   <node concept="PlHQZ" id="1JHDVNJM$Xk">
     <property role="EcuMT" value="2012449038423183188" />
-    <property role="TrG5h" value="IWorksheetExpression" />
+    <property role="TrG5h" value="IClassExpression" />
   </node>
   <node concept="PlHQZ" id="1JHDVNJM_Xb">
     <property role="EcuMT" value="2012449038423187275" />
     <property role="TrG5h" value="IWorksheetDeclaration" />
     <node concept="PrWs8" id="1JHDVNJM_Xc" role="PrDN$">
-      <ref role="PrY4T" node="1JHDVNJM$Xk" resolve="IWorksheetExpression" />
+      <ref role="PrY4T" node="1JHDVNJM$Xk" resolve="IClassExpression" />
     </node>
     <node concept="PrWs8" id="1JHDVNJM_Xf" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -124,16 +124,13 @@
     <node concept="PrWs8" id="4LeMH29fa4T" role="PrDN$">
       <ref role="PrY4T" node="1JHDVNJM_Xb" resolve="IWorksheetDeclaration" />
     </node>
-    <node concept="PrWs8" id="4LeMH29fLxb" role="PrDN$">
-      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
-    </node>
   </node>
   <node concept="1TIwiD" id="4LeMH29m5OE">
     <property role="EcuMT" value="5498555192072232234" />
     <property role="TrG5h" value="EmptyLine" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="PrWs8" id="4LeMH29m5OF" role="PzmwI">
-      <ref role="PrY4T" node="1JHDVNJM$Xk" resolve="IWorksheetExpression" />
+      <ref role="PrY4T" node="1JHDVNJM$Xk" resolve="IClassExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="59xQepPIQq$">
@@ -162,7 +159,7 @@
       <ref role="20lvS9" node="59xQepPJ9Gs" resolve="Expression" />
     </node>
     <node concept="PrWs8" id="59xQepPJGv7" role="PzmwI">
-      <ref role="PrY4T" node="1JHDVNJM$Xk" resolve="IWorksheetExpression" />
+      <ref role="PrY4T" node="1JHDVNJM$Xk" resolve="IClassExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="59xQepPJ9Gr">
@@ -202,10 +199,13 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="body" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="1JHDVNJM$Xk" resolve="IWorksheetExpression" />
+      <ref role="20lvS9" node="1JHDVNJM$Xk" resolve="IClassExpression" />
     </node>
     <node concept="PrWs8" id="59xQepPOPAR" role="PzmwI">
-      <ref role="PrY4T" node="1JHDVNJM$Xk" resolve="IWorksheetExpression" />
+      <ref role="PrY4T" node="1JHDVNJM$Xk" resolve="IClassExpression" />
+    </node>
+    <node concept="PrWs8" id="3$Bnb4eBMIj" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
   <node concept="1TIwiD" id="59xQepPLyXY">
@@ -219,22 +219,6 @@
     <property role="TrG5h" value="OperatorMultiply" />
     <property role="34LRSv" value="*" />
     <ref role="1TJDcQ" node="59xQepPJ9Gr" resolve="Operator" />
-  </node>
-  <node concept="1TIwiD" id="59xQepPP7mB">
-    <property role="EcuMT" value="5936264268181960103" />
-    <property role="TrG5h" value="BlockExpression" />
-    <property role="34LRSv" value="do" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="59xQepPP7mC" role="1TKVEi">
-      <property role="IQ2ns" value="5936264268181960104" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="block" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="59xQepPKy0N" resolve="Block" />
-    </node>
-    <node concept="PrWs8" id="59xQepPPgmX" role="PzmwI">
-      <ref role="PrY4T" node="1JHDVNJM$Xk" resolve="IWorksheetExpression" />
-    </node>
   </node>
   <node concept="1TIwiD" id="6$K_gY1ChE1">
     <property role="EcuMT" value="7579722066696411777" />
@@ -264,6 +248,19 @@
     <property role="EcuMT" value="3480684519027044260" />
     <property role="TrG5h" value="FunctionExpression" />
     <ref role="1TJDcQ" node="59xQepPJ9Gs" resolve="Expression" />
+    <node concept="1TJgyj" id="3$Bnb4esqIs" role="1TKVEi">
+      <property role="IQ2ns" value="4118362299774905244" />
+      <property role="20kJfa" value="function" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="31dS23FNIZf" resolve="FunctionDeclaration" />
+    </node>
+    <node concept="1TJgyj" id="3$Bnb4esL$n" role="1TKVEi">
+      <property role="IQ2ns" value="4118362299774998807" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="arguments" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3$Bnb4esAsw" resolve="FunctionArgument" />
+    </node>
   </node>
   <node concept="1TIwiD" id="31dS23FNIZf">
     <property role="EcuMT" value="3480684519027044303" />
@@ -272,7 +269,13 @@
     <property role="R4oN_" value="wer das liest ist doof" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" />
     <node concept="PrWs8" id="31dS23FNIZg" role="PzmwI">
+      <ref role="PrY4T" node="1JHDVNJM$Xk" resolve="IClassExpression" />
+    </node>
+    <node concept="PrWs8" id="3$Bnb4eI$Ym" role="PzmwI">
       <ref role="PrY4T" node="4LeMH29g3NR" resolve="IVariableDeclaration" />
+    </node>
+    <node concept="PrWs8" id="3$Bnb4evMU0" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
     <node concept="1TJgyj" id="6psPXK2XA_G" role="1TKVEi">
       <property role="IQ2ns" value="7376007629668510060" />
@@ -309,6 +312,50 @@
     </node>
     <node concept="PrWs8" id="6psPXK2XA_f" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3$Bnb4erxgD">
+    <property role="EcuMT" value="4118362299774669865" />
+    <property role="TrG5h" value="Class" />
+    <property role="34LRSv" value="class" />
+    <property role="R4oN_" value="hallihallo" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="3$Bnb4erxhw" role="1TKVEi">
+      <property role="IQ2ns" value="4118362299774669920" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="body" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="59xQepPKy0N" resolve="Block" />
+    </node>
+    <node concept="PrWs8" id="3$Bnb4erxik" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="3$Bnb4evokC" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3$Bnb4erRd6">
+    <property role="EcuMT" value="4118362299774759750" />
+    <property role="TrG5h" value="BlockWorksheet" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3$Bnb4erRd7" role="1TKVEi">
+      <property role="IQ2ns" value="4118362299774759751" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="body" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3$Bnb4erxgD" resolve="Class" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3$Bnb4esAsw">
+    <property role="EcuMT" value="4118362299774953248" />
+    <property role="TrG5h" value="FunctionArgument" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="3$Bnb4esAsx" role="1TKVEi">
+      <property role="IQ2ns" value="4118362299774953249" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="body" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="59xQepPJ9Gs" resolve="Expression" />
     </node>
   </node>
 </model>

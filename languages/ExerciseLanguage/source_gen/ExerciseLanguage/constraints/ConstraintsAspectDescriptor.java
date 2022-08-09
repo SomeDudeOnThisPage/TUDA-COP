@@ -19,10 +19,12 @@ public class ConstraintsAspectDescriptor extends BaseConstraintsAspectDescriptor
     SAbstractConcept cncpt = concept;
     switch (conceptIndex.index(cncpt)) {
       case 0:
-        return new IWorksheetExpression_Constraints();
+        return new IClassExpression_Constraints();
+      case 1:
+        return new ReferenceExpression_Constraints();
       default:
     }
     return new BaseConstraintsDescriptor(concept);
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x6930950f81a11a81L)).seal();
 }

@@ -52,22 +52,22 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     style.set(StyleAttributes.EDITABLE, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
-    editorCell.setSubstituteInfo(new CompositeSubstituteInfo(getEditorContext(), new BasicCellContext(myNode), new SubstituteInfoPartExt[]{new ReplaceWith_IWorksheetExpression_cellMenu_s23fc5_a0a(), new SChildSubstituteInfoPartEx(editorCell)}));
+    editorCell.setSubstituteInfo(new CompositeSubstituteInfo(getEditorContext(), new BasicCellContext(myNode), new SubstituteInfoPartExt[]{new ReplaceWith_IClassExpression_cellMenu_s23fc5_a0a(), new SChildSubstituteInfoPartEx(editorCell)}));
     return editorCell;
   }
-  public static class ReplaceWith_IWorksheetExpression_cellMenu_s23fc5_a0a extends AbstractCellMenuPart_ReplaceNode_CustomNodeConcept {
-    public ReplaceWith_IWorksheetExpression_cellMenu_s23fc5_a0a() {
+  public static class ReplaceWith_IClassExpression_cellMenu_s23fc5_a0a extends AbstractCellMenuPart_ReplaceNode_CustomNodeConcept {
+    public ReplaceWith_IClassExpression_cellMenu_s23fc5_a0a() {
     }
     public SAbstractConcept getReplacementConcept() {
-      return CONCEPTS.IWorksheetExpression$8J;
+      return CONCEPTS.IClassExpression$8J;
     }
     @Override
     protected EditorMenuDescriptor createEditorMenuDescriptor(CellContext cellContext, EditorContext editorContext) {
-      return new EditorMenuDescriptorBase("replace node (custom node concept: " + "IWorksheetExpression" + ")", new SNodePointer("r:7123b464-18e2-4320-ad51-61b525d47f82(ExerciseLanguage.editor)", "5498555192072399033"));
+      return new EditorMenuDescriptorBase("replace node (custom node concept: " + "IClassExpression" + ")", new SNodePointer("r:7123b464-18e2-4320-ad51-61b525d47f82(ExerciseLanguage.editor)", "5498555192072399033"));
     }
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IWorksheetExpression$8J = MetaAdapterFactory.getInterfaceConcept(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L, "ExerciseLanguage.structure.IWorksheetExpression");
+    /*package*/ static final SInterfaceConcept IClassExpression$8J = MetaAdapterFactory.getInterfaceConcept(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L, "ExerciseLanguage.structure.IClassExpression");
   }
 }

@@ -12,7 +12,7 @@ import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
-  private final BHDescriptor myWorksheet__BehaviorDescriptor = new Worksheet__BehaviorDescriptor();
+  private final BHDescriptor myBlock__BehaviorDescriptor = new Block__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -22,10 +22,10 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
     SAbstractConcept cncpt = concept;
     switch (conceptIndex.index(cncpt)) {
       case 0:
-        return myWorksheet__BehaviorDescriptor;
+        return myBlock__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f4fL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675c22033L)).seal();
 }

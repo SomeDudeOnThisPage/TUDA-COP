@@ -7,9 +7,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class IWorksheetExpression_Constraints extends BaseConstraintsDescriptor {
-  public IWorksheetExpression_Constraints() {
-    super(CONCEPTS.IWorksheetExpression$8J);
+public class IClassExpression_Constraints extends BaseConstraintsDescriptor {
+  public IClassExpression_Constraints() {
+    super(CONCEPTS.IClassExpression$8J);
   }
 
   @Override
@@ -18,7 +18,7 @@ public class IWorksheetExpression_Constraints extends BaseConstraintsDescriptor 
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SInterfaceConcept IWorksheetExpression$8J = MetaAdapterFactory.getInterfaceConcept(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L, "ExerciseLanguage.structure.IWorksheetExpression");
+    /*package*/ static final SInterfaceConcept IClassExpression$8J = MetaAdapterFactory.getInterfaceConcept(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x1beda7bcefca4f54L, "ExerciseLanguage.structure.IClassExpression");
     /*package*/ static final SConcept EmptyLine$Mk = MetaAdapterFactory.getConcept(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad089585d2aL, "ExerciseLanguage.structure.EmptyLine");
   }
 }
