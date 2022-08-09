@@ -16,6 +16,9 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BracketExpression;
   private ConceptPresentation props_EmptyLine;
   private ConceptPresentation props_Expression;
+  private ConceptPresentation props_FunctionDeclaration;
+  private ConceptPresentation props_FunctionExpression;
+  private ConceptPresentation props_FunctionParameter;
   private ConceptPresentation props_IVariableDeclaration;
   private ConceptPresentation props_IWorksheetDeclaration;
   private ConceptPresentation props_IWorksheetExpression;
@@ -81,6 +84,28 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Expression = cpb.create();
         }
         return props_Expression;
+      case LanguageConceptSwitch.FunctionDeclaration:
+        if (props_FunctionDeclaration == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("wer das liest ist doof");
+          cpb.presentationByName();
+          props_FunctionDeclaration = cpb.create();
+        }
+        return props_FunctionDeclaration;
+      case LanguageConceptSwitch.FunctionExpression:
+        if (props_FunctionExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("FunctionExpression");
+          props_FunctionExpression = cpb.create();
+        }
+        return props_FunctionExpression;
+      case LanguageConceptSwitch.FunctionParameter:
+        if (props_FunctionParameter == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_FunctionParameter = cpb.create();
+        }
+        return props_FunctionParameter;
       case LanguageConceptSwitch.IVariableDeclaration:
         if (props_IVariableDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -16,17 +16,20 @@ public final class LanguageConceptSwitch {
   public static final int BracketExpression = 4;
   public static final int EmptyLine = 5;
   public static final int Expression = 6;
-  public static final int IVariableDeclaration = 7;
-  public static final int IWorksheetDeclaration = 8;
-  public static final int IWorksheetExpression = 9;
-  public static final int IntegerDeclaration = 10;
-  public static final int LiteralExpression = 11;
-  public static final int Operator = 12;
-  public static final int OperatorAdd = 13;
-  public static final int OperatorAssign = 14;
-  public static final int OperatorMultiply = 15;
-  public static final int ReferenceExpression = 16;
-  public static final int Worksheet = 17;
+  public static final int FunctionDeclaration = 7;
+  public static final int FunctionExpression = 8;
+  public static final int FunctionParameter = 9;
+  public static final int IVariableDeclaration = 10;
+  public static final int IWorksheetDeclaration = 11;
+  public static final int IWorksheetExpression = 12;
+  public static final int IntegerDeclaration = 13;
+  public static final int LiteralExpression = 14;
+  public static final int Operator = 15;
+  public static final int OperatorAdd = 16;
+  public static final int OperatorAssign = 17;
+  public static final int OperatorMultiply = 18;
+  public static final int ReferenceExpression = 19;
+  public static final int Worksheet = 20;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x97a51900650f4519L, 0xa79289e9b2b161cbL);
@@ -37,6 +40,9 @@ public final class LanguageConceptSwitch {
     builder.put(0x761b7b07134f4fe3L, BracketExpression);
     builder.put(0x4c4ecad089585d2aL, EmptyLine);
     builder.put(0x5261d8e675bc9b1cL, Expression);
+    builder.put(0x304de020ebceefcfL, FunctionDeclaration);
+    builder.put(0x304de020ebceefa4L, FunctionExpression);
+    builder.put(0x304de020ebcef043L, FunctionParameter);
     builder.put(0x4c4ecad0893aec5fL, IVariableDeclaration);
     builder.put(0x1beda7bcefca5f4bL, IWorksheetDeclaration);
     builder.put(0x1beda7bcefca4f54L, IWorksheetExpression);

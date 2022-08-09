@@ -6,6 +6,10 @@
   </languages>
   <imports />
   <registry>
+    <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
+      <concept id="1068431790189" name="jetbrains.mps.baseLanguage.structure.Type" flags="in" index="33vP2l" />
+    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -28,6 +32,10 @@
       <concept id="5498555192072232234" name="ExerciseLanguage.structure.EmptyLine" flags="ng" index="355DvU" />
       <concept id="5498555192070302820" name="ExerciseLanguage.structure.IntegerDeclaration" flags="ng" index="35t2qO">
         <child id="8510531191165158275" name="expression" index="1_kRy4" />
+      </concept>
+      <concept id="3480684519027044303" name="ExerciseLanguage.structure.FunctionDeclaration" flags="ng" index="3rwKZJ">
+        <child id="3480684519027044416" name="parameters" index="3rwL1w" />
+        <child id="3480684519027044660" name="return" index="3rwL4k" />
       </concept>
       <concept id="8510531191165636579" name="ExerciseLanguage.structure.BracketExpression" flags="ng" index="1_l3j$">
         <child id="8510531191165636598" name="expression" index="1_l3jL" />
@@ -83,6 +91,13 @@
             </node>
           </node>
         </node>
+      </node>
+      <node concept="3rwKZJ" id="31dS23FOejY" role="BCZzi">
+        <property role="TrG5h" value="shit" />
+        <node concept="10Oyi0" id="31dS23FOeko" role="3rwL1w" />
+        <node concept="10Oyi0" id="31dS23FOeku" role="3rwL1w" />
+        <node concept="10Oyi0" id="31dS23FOekA" role="3rwL1w" />
+        <node concept="33vP2l" id="31dS23FOek0" role="3rwL4k" />
       </node>
     </node>
   </node>
