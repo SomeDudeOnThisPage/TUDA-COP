@@ -8,7 +8,6 @@
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
-      <concept id="1068431790189" name="jetbrains.mps.baseLanguage.structure.Type" flags="in" index="33vP2l" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -34,8 +33,12 @@
         <child id="8510531191165158275" name="expression" index="1_kRy4" />
       </concept>
       <concept id="3480684519027044303" name="ExerciseLanguage.structure.FunctionDeclaration" flags="ng" index="3rwKZJ">
-        <child id="3480684519027044416" name="parameters" index="3rwL1w" />
+        <child id="3480684519027044306" name="body" index="3rwKZM" />
         <child id="3480684519027044660" name="return" index="3rwL4k" />
+        <child id="7376007629668510060" name="parameters" index="1$EFUK" />
+      </concept>
+      <concept id="3480684519027044419" name="ExerciseLanguage.structure.FunctionParameter" flags="ng" index="3rwL1z">
+        <child id="7376007629668510029" name="type" index="1$EFUh" />
       </concept>
       <concept id="8510531191165636579" name="ExerciseLanguage.structure.BracketExpression" flags="ng" index="1_l3j$">
         <child id="8510531191165636598" name="expression" index="1_l3jL" />
@@ -92,12 +95,27 @@
           </node>
         </node>
       </node>
-      <node concept="3rwKZJ" id="31dS23FOejY" role="BCZzi">
-        <property role="TrG5h" value="shit" />
-        <node concept="10Oyi0" id="31dS23FOeko" role="3rwL1w" />
-        <node concept="10Oyi0" id="31dS23FOeku" role="3rwL1w" />
-        <node concept="10Oyi0" id="31dS23FOekA" role="3rwL1w" />
-        <node concept="33vP2l" id="31dS23FOek0" role="3rwL4k" />
+      <node concept="3rwKZJ" id="3$Bnb4eqxss" role="BCZzi">
+        <property role="TrG5h" value="cool" />
+        <node concept="BCZzl" id="3$Bnb4eqxsu" role="3rwKZM">
+          <node concept="35t2qO" id="3$Bnb4ernyE" role="BCZzi">
+            <property role="TrG5h" value="cool1" />
+            <node concept="BRCWf" id="3$Bnb4ernyI" role="1_kRy4">
+              <property role="BRCWc" value="23" />
+            </node>
+          </node>
+          <node concept="35t2qO" id="3$Bnb4ernyP" role="BCZzi">
+            <property role="TrG5h" value="cool1" />
+            <node concept="BRCWf" id="3$Bnb4ernyX" role="1_kRy4">
+              <property role="BRCWc" value="2222" />
+            </node>
+          </node>
+        </node>
+        <node concept="10Oyi0" id="3$Bnb4ere5m" role="3rwL4k" />
+        <node concept="3rwL1z" id="3$Bnb4ernyz" role="1$EFUK">
+          <property role="TrG5h" value="ass" />
+          <node concept="10Oyi0" id="3$Bnb4ernyB" role="1$EFUh" />
+        </node>
       </node>
     </node>
   </node>
