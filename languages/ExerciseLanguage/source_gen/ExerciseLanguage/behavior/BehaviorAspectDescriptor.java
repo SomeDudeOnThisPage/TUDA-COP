@@ -12,7 +12,24 @@ import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
+  private final BHDescriptor myFunctionExpression__BehaviorDescriptor = new FunctionExpression__BehaviorDescriptor();
+  private final BHDescriptor myIntegerDeclaration__BehaviorDescriptor = new IntegerDeclaration__BehaviorDescriptor();
+  private final BHDescriptor myOperatorEquals__BehaviorDescriptor = new OperatorEquals__BehaviorDescriptor();
+  private final BHDescriptor myOperatorGreaterThan__BehaviorDescriptor = new OperatorGreaterThan__BehaviorDescriptor();
+  private final BHDescriptor myOperatorLessThan__BehaviorDescriptor = new OperatorLessThan__BehaviorDescriptor();
+  private final BHDescriptor myOperatorOr__BehaviorDescriptor = new OperatorOr__BehaviorDescriptor();
+  private final BHDescriptor myOperatorAnd__BehaviorDescriptor = new OperatorAnd__BehaviorDescriptor();
+  private final BHDescriptor myBinaryExpression__BehaviorDescriptor = new BinaryExpression__BehaviorDescriptor();
+  private final BHDescriptor myOperator__BehaviorDescriptor = new Operator__BehaviorDescriptor();
+  private final BHDescriptor myIExpression__BehaviorDescriptor = new IExpression__BehaviorDescriptor();
+  private final BHDescriptor myOperatorAdd__BehaviorDescriptor = new OperatorAdd__BehaviorDescriptor();
+  private final BHDescriptor myConstantIntegerExpression__BehaviorDescriptor = new ConstantIntegerExpression__BehaviorDescriptor();
   private final BHDescriptor myBlock__BehaviorDescriptor = new Block__BehaviorDescriptor();
+  private final BHDescriptor myOperatorAssign__BehaviorDescriptor = new OperatorAssign__BehaviorDescriptor();
+  private final BHDescriptor myOperatorMultiply__BehaviorDescriptor = new OperatorMultiply__BehaviorDescriptor();
+  private final BHDescriptor myConstantBooleanExpression__BehaviorDescriptor = new ConstantBooleanExpression__BehaviorDescriptor();
+  private final BHDescriptor myReferenceExpression__BehaviorDescriptor = new ReferenceExpression__BehaviorDescriptor();
+  private final BHDescriptor myBracketExpression__BehaviorDescriptor = new BracketExpression__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -22,10 +39,44 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
     SAbstractConcept cncpt = concept;
     switch (conceptIndex.index(cncpt)) {
       case 0:
+        return myBinaryExpression__BehaviorDescriptor;
+      case 1:
         return myBlock__BehaviorDescriptor;
+      case 2:
+        return myBracketExpression__BehaviorDescriptor;
+      case 3:
+        return myConstantBooleanExpression__BehaviorDescriptor;
+      case 4:
+        return myConstantIntegerExpression__BehaviorDescriptor;
+      case 5:
+        return myFunctionExpression__BehaviorDescriptor;
+      case 6:
+        return myIExpression__BehaviorDescriptor;
+      case 7:
+        return myIntegerDeclaration__BehaviorDescriptor;
+      case 8:
+        return myOperator__BehaviorDescriptor;
+      case 9:
+        return myOperatorAdd__BehaviorDescriptor;
+      case 10:
+        return myOperatorAnd__BehaviorDescriptor;
+      case 11:
+        return myOperatorAssign__BehaviorDescriptor;
+      case 12:
+        return myOperatorEquals__BehaviorDescriptor;
+      case 13:
+        return myOperatorGreaterThan__BehaviorDescriptor;
+      case 14:
+        return myOperatorLessThan__BehaviorDescriptor;
+      case 15:
+        return myOperatorMultiply__BehaviorDescriptor;
+      case 16:
+        return myOperatorOr__BehaviorDescriptor;
+      case 17:
+        return myReferenceExpression__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675c22033L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bb66a4L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675c22033L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x761b7b07134f4fe3L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x53d99cc795194f20L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bf57e9L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x304de020ebceefa4L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1cL), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x4c4ecad0893aec64L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bc9b1bL), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bec7b7L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5179ca4b495dbea9L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675c62f7eL), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5179ca4b495ce63fL), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5179ca4b495dbe91L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5179ca4b495dbe99L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675c90242L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5179ca4b495dbea1L), MetaIdFactory.conceptId(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x6930950f81a11a81L)).seal();
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-3h9rjzfwj9uhlqklia5naimmetmvscm">
-  <files names="FunctionArgumentCheck_NonTypesystemRule.java:ReferenceRepetitionCheck_NonTypesystemRule.java:TypesystemDescriptor.java:VariableUsedBeforeDeclaration_NonTypesystemRule.java" />
+<product version="3" modelHash="-4y8z7jsbphtnsv36gobrtlfllut261z">
+  <files names="FunctionArgumentCheck_NonTypesystemRule.java:ReferenceRepetitionCheck_NonTypesystemRule.java:TypesystemDescriptor.java:VariableUsedBeforeDeclaration_NonTypesystemRule.java:check_BinaryExpression_NonTypesystemRule.java:check_BooleanDeclaration_NonTypesystemRule.java:check_IntegerDeclaration_NonTypesystemRule.java" />
 </product>
 

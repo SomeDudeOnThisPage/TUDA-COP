@@ -23,11 +23,11 @@ import jetbrains.mps.openapi.editor.update.AttributeKind;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-/*package*/ class LiteralExpression_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class ConstantBooleanExpression_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public LiteralExpression_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public ConstantBooleanExpression_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -45,7 +45,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createProperty_0() {
     getCellFactory().pushCellContext();
     try {
-      final SProperty property = PROPS.value$3qZH;
+      final SProperty property = PROPS.value$PKOd;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
       editorCell.setDefaultText("<no value>");
@@ -71,7 +71,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty value$3qZH = MetaAdapterFactory.getProperty(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x5261d8e675bf57e9L, 0x5261d8e675bf57eaL, "value");
+    /*package*/ static final SProperty value$PKOd = MetaAdapterFactory.getProperty(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x53d99cc795194f20L, 0x53d99cc795194f21L, "value");
   }
 
   private static final class CONCEPTS {
