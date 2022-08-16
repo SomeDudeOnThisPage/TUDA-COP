@@ -9,8 +9,8 @@
   <imports>
     <import index="6tq9" ref="r:c818b07f-421c-4643-b9fb-4d131f6e022e(ExerciseLanguage.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
     <import index="tpen" ref="r:00000000-0000-4000-0000-011c895902c3(jetbrains.mps.baseLanguage.editor)" implicit="true" />
+    <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -104,8 +104,8 @@
     <ref role="1XX52x" to="6tq9:4LeMH29eIL$" resolve="IntegerDeclaration" />
     <node concept="3EZMnI" id="4LeMH29fceu" role="2wV5jI">
       <node concept="l2Vlx" id="4LeMH29fcev" role="2iSdaV" />
-      <node concept="PMmxH" id="59xQepPPOnG" role="3EZMnx">
-        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      <node concept="3F1sOY" id="32PWdt9PP_j" role="3EZMnx">
+        <ref role="1NtTu8" to="6tq9:32PWdt9PP$g" resolve="type" />
       </node>
       <node concept="3F0A7n" id="4LeMH29fceF" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
@@ -130,8 +130,8 @@
     <ref role="1XX52x" to="6tq9:4LeMH29fceS" resolve="BooleanDeclaration" />
     <node concept="3EZMnI" id="4LeMH29fceV" role="2wV5jI">
       <node concept="l2Vlx" id="4LeMH29fceW" role="2iSdaV" />
-      <node concept="PMmxH" id="59xQepPPOnB" role="3EZMnx">
-        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      <node concept="3F1sOY" id="32PWdt9PP_B" role="3EZMnx">
+        <ref role="1NtTu8" to="6tq9:32PWdt9PP$d" resolve="type" />
       </node>
       <node concept="3F0A7n" id="4LeMH29fcfb" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
@@ -287,7 +287,7 @@
       <node concept="2iRkQZ" id="31dS23FNJ0b" role="2iSdaV" />
       <node concept="3EZMnI" id="31dS23FNJ0g" role="3EZMnx">
         <node concept="3F1sOY" id="3$Bnb4er4A4" role="3EZMnx">
-          <ref role="1NtTu8" to="6tq9:31dS23FNJ4O" resolve="return" />
+          <ref role="1NtTu8" to="6tq9:32PWdt9PP_L" resolve="return" />
         </node>
         <node concept="2iRfu4" id="31dS23FNJ0h" role="2iSdaV" />
         <node concept="3F0A7n" id="31dS23FNJ0I" role="3EZMnx">
@@ -478,6 +478,26 @@
     <ref role="1XX52x" to="6tq9:5fpBcul6kWw" resolve="ConstantBooleanExpression" />
     <node concept="3F0A7n" id="5fpBcul6mgF" role="2wV5jI">
       <ref role="1NtTu8" to="6tq9:5fpBcul6kWx" resolve="value" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="32PWdt9QanN">
+    <property role="3GE5qa" value="declaration" />
+    <ref role="1XX52x" to="6tq9:32PWdt9PP$5" resolve="BoolType" />
+    <node concept="3EZMnI" id="32PWdt9QanP" role="2wV5jI">
+      <node concept="PMmxH" id="32PWdt9RfbD" role="3EZMnx">
+        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      </node>
+      <node concept="l2Vlx" id="32PWdt9QanS" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="32PWdt9Qao9">
+    <property role="3GE5qa" value="declaration" />
+    <ref role="1XX52x" to="6tq9:32PWdt9PP$6" resolve="IntType" />
+    <node concept="3EZMnI" id="32PWdt9Qaob" role="2wV5jI">
+      <node concept="PMmxH" id="32PWdt9Rfb_" role="3EZMnx">
+        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      </node>
+      <node concept="l2Vlx" id="32PWdt9Qaoe" role="2iSdaV" />
     </node>
   </node>
 </model>

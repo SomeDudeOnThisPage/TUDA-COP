@@ -20,6 +20,9 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.scope.ListScope;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import jetbrains.mps.lang.scopes.runtime.HidingByNameScope;
+import jetbrains.mps.lang.scopes.runtime.ScopeUtils;
+import jetbrains.mps.scope.CompositeScope;
 import jetbrains.mps.lang.core.behavior.ScopeProvider__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
@@ -41,23 +44,23 @@ public final class Block__BehaviorDescriptor extends BaseBHDescriptor {
 
   /*package*/ static Scope getScope_id52_Geb4QDV$(@NotNull SNode __thisNode__, SAbstractConcept kind, final SNode child) {
     if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.IClassExpression$8J)) {
-
-      return ListScope.forNamedElements(Sequence.fromIterable(SNodeOperations.ofConcept(Block__BehaviorDescriptor.getExpressions_id5fpBculaQZI.invoke(__thisNode__), CONCEPTS.IClassExpression$8J)).where(new IWhereFilter<SNode>() {
+      ListScope vars = ListScope.forNamedElements(Sequence.fromIterable(SNodeOperations.ofConcept(Block__BehaviorDescriptor.getExpressions_id5fpBculaQZI.invoke(__thisNode__), CONCEPTS.IClassExpression$8J)).where(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
           return SNodeOperations.getIndexInParent(it) < SNodeOperations.getIndexInParent(child);
         }
       }));
+      return new HidingByNameScope(CONCEPTS.IClassExpression$8J, kind, vars, ScopeUtils.lazyParentScope(__thisNode__, kind));
     }
     return null;
   }
   /*package*/ static Scope getScope_id52_Geb4QFgX(@NotNull SNode __thisNode__, SAbstractConcept kind, final SContainmentLink link, final int index) {
     if (SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(kind), CONCEPTS.IClassExpression$8J)) {
-
-      return ListScope.forNamedElements(Sequence.fromIterable(SNodeOperations.ofConcept(Block__BehaviorDescriptor.getExpressions_id5fpBculaQZI.invoke(__thisNode__), CONCEPTS.IClassExpression$8J)).where(new IWhereFilter<SNode>() {
+      ListScope vars = ListScope.forNamedElements(Sequence.fromIterable(SNodeOperations.ofConcept(Block__BehaviorDescriptor.getExpressions_id5fpBculaQZI.invoke(__thisNode__), CONCEPTS.IClassExpression$8J)).where(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
           return SNodeOperations.getIndexInParent(it) < index;
         }
       }));
+      return CompositeScope.createComposite(vars, ScopeUtils.lazyParentScope(__thisNode__, kind));
     }
     return ((Scope) ScopeProvider__BehaviorDescriptor.getScope_id52_Geb4QFgX.invoke0(__thisNode__, CONCEPTS.ScopeProvider$aq, kind, link, ((int) index)));
   }
