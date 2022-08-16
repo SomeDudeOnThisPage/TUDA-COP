@@ -500,5 +500,31 @@
       <node concept="l2Vlx" id="32PWdt9Qaoe" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="32PWdt9Z0K3">
+    <property role="3GE5qa" value="declaration" />
+    <ref role="1XX52x" to="6tq9:32PWdt9Z0JY" resolve="EmptyIntegerDeclararion" />
+    <node concept="3EZMnI" id="32PWdt9Z0K5" role="2wV5jI">
+      <node concept="3F1sOY" id="32PWdt9Z0Kc" role="3EZMnx">
+        <ref role="1NtTu8" to="6tq9:32PWdt9Z0K1" resolve="type" />
+      </node>
+      <node concept="3F0A7n" id="32PWdt9Z0Ki" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="l2Vlx" id="32PWdt9Z0K8" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="32PWdt9Z0K_">
+    <property role="3GE5qa" value="declaration" />
+    <ref role="1XX52x" to="6tq9:32PWdt9Z0Kp" resolve="EmptyBooleanDeclaration" />
+    <node concept="3EZMnI" id="32PWdt9Z0KB" role="2wV5jI">
+      <node concept="3F1sOY" id="32PWdt9Z0KI" role="3EZMnx">
+        <ref role="1NtTu8" to="6tq9:32PWdt9Z0Ks" resolve="type" />
+      </node>
+      <node concept="3F0A7n" id="32PWdt9Z0KO" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="l2Vlx" id="32PWdt9Z0KE" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

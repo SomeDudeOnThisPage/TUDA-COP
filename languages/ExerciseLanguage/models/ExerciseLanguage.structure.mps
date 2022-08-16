@@ -90,7 +90,7 @@
     <property role="EcuMT" value="5498555192070302820" />
     <property role="TrG5h" value="IntegerDeclaration" />
     <property role="34LRSv" value="int" />
-    <property role="R4oN_" value="boop" />
+    <property role="R4oN_" value="declare in Integer" />
     <property role="3GE5qa" value="declaration" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="32PWdt9PP$g" role="1TKVEi">
@@ -116,6 +116,7 @@
     <property role="TrG5h" value="BooleanDeclaration" />
     <property role="34LRSv" value="boo" />
     <property role="3GE5qa" value="declaration" />
+    <property role="R4oN_" value="declare a Bolean" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="4LeMH29g3NX" role="PzmwI">
       <ref role="PrY4T" node="4LeMH29g3NR" resolve="IVariableDeclaration" />
@@ -225,6 +226,8 @@
     <property role="EcuMT" value="5936264268180576233" />
     <property role="TrG5h" value="ConstantIntegerExpression" />
     <property role="3GE5qa" value="expression" />
+    <property role="34LRSv" value="const int" />
+    <property role="R4oN_" value="create constant integer" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="59xQepPJPvE" role="1TKVEl">
       <property role="IQ2nx" value="5936264268180576234" />
@@ -328,7 +331,7 @@
     <node concept="PrWs8" id="31dS23FNIZg" role="PzmwI">
       <ref role="PrY4T" node="1JHDVNJM$Xk" resolve="IClassExpression" />
     </node>
-    <node concept="PrWs8" id="3$Bnb4eI$Ym" role="PzmwI">
+    <node concept="PrWs8" id="32PWdta3qhB" role="PzmwI">
       <ref role="PrY4T" node="4LeMH29g3NR" resolve="IVariableDeclaration" />
     </node>
     <node concept="PrWs8" id="3$Bnb4evMU0" role="PzmwI">
@@ -339,7 +342,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="parameters" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="31dS23FNJ13" resolve="FunctionParameter" />
+      <ref role="20lvS9" node="32PWdt9Z0Km" resolve="IEmptyVariableDeclaration" />
     </node>
     <node concept="1TJgyj" id="31dS23FNIZi" role="1TKVEi">
       <property role="IQ2ns" value="3480684519027044306" />
@@ -538,6 +541,8 @@
     <property role="EcuMT" value="6042032756108119840" />
     <property role="3GE5qa" value="expression" />
     <property role="TrG5h" value="ConstantBooleanExpression" />
+    <property role="34LRSv" value="const boo" />
+    <property role="R4oN_" value="create constant bool (ja/nein)" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="5fpBcul6kWx" role="1TKVEl">
       <property role="IQ2nx" value="6042032756108119841" />
@@ -599,6 +604,48 @@
     <property role="EcuMT" value="3509976292052654344" />
     <property role="3GE5qa" value="declaration" />
     <property role="TrG5h" value="IType" />
+  </node>
+  <node concept="1TIwiD" id="32PWdt9Z0JY">
+    <property role="EcuMT" value="3509976292055059454" />
+    <property role="3GE5qa" value="declaration" />
+    <property role="TrG5h" value="EmptyIntegerDeclararion" />
+    <property role="34LRSv" value="int empty" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="32PWdt9Z0K1" role="1TKVEi">
+      <property role="IQ2ns" value="3509976292055059457" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="type" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="32PWdt9PP$6" resolve="IntType" />
+    </node>
+    <node concept="PrWs8" id="32PWdt9Z0JZ" role="PzmwI">
+      <ref role="PrY4T" node="32PWdt9Z0Km" resolve="IEmptyVariableDeclaration" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="32PWdt9Z0Km">
+    <property role="EcuMT" value="3509976292055059478" />
+    <property role="3GE5qa" value="declaration" />
+    <property role="TrG5h" value="IEmptyVariableDeclaration" />
+    <node concept="PrWs8" id="32PWdt9Z0Kn" role="PrDN$">
+      <ref role="PrY4T" node="4LeMH29g3NR" resolve="IVariableDeclaration" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="32PWdt9Z0Kp">
+    <property role="EcuMT" value="3509976292055059481" />
+    <property role="3GE5qa" value="declaration" />
+    <property role="TrG5h" value="EmptyBooleanDeclaration" />
+    <property role="34LRSv" value="boo empty" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" />
+    <node concept="1TJgyj" id="32PWdt9Z0Ks" role="1TKVEi">
+      <property role="IQ2ns" value="3509976292055059484" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="type" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="32PWdt9PP$5" resolve="BoolType" />
+    </node>
+    <node concept="PrWs8" id="32PWdt9Z0Kq" role="PzmwI">
+      <ref role="PrY4T" node="32PWdt9Z0Km" resolve="IEmptyVariableDeclaration" />
+    </node>
   </node>
 </model>
 

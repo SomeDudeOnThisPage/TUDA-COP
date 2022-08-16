@@ -20,12 +20,15 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ConstantBooleanExpression;
   private ConceptPresentation props_ConstantIntegerExpression;
   private ConceptPresentation props_Else;
+  private ConceptPresentation props_EmptyBooleanDeclaration;
+  private ConceptPresentation props_EmptyIntegerDeclararion;
   private ConceptPresentation props_EmptyLine;
   private ConceptPresentation props_FunctionArgument;
   private ConceptPresentation props_FunctionDeclaration;
   private ConceptPresentation props_FunctionExpression;
   private ConceptPresentation props_FunctionParameter;
   private ConceptPresentation props_IClassExpression;
+  private ConceptPresentation props_IEmptyVariableDeclaration;
   private ConceptPresentation props_IExpression;
   private ConceptPresentation props_IType;
   private ConceptPresentation props_IVariableDeclaration;
@@ -87,6 +90,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.BooleanDeclaration:
         if (props_BooleanDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("declare a Bolean");
           cpb.presentationByName();
           props_BooleanDeclaration = cpb.create();
         }
@@ -109,14 +113,16 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.ConstantBooleanExpression:
         if (props_ConstantBooleanExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("ConstantBooleanExpression");
+          cpb.shortDesc("create constant bool (ja/nein)");
+          cpb.rawPresentation("const boo");
           props_ConstantBooleanExpression = cpb.create();
         }
         return props_ConstantBooleanExpression;
       case LanguageConceptSwitch.ConstantIntegerExpression:
         if (props_ConstantIntegerExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("ConstantIntegerExpression");
+          cpb.shortDesc("create constant integer");
+          cpb.rawPresentation("const int");
           props_ConstantIntegerExpression = cpb.create();
         }
         return props_ConstantIntegerExpression;
@@ -128,6 +134,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Else = cpb.create();
         }
         return props_Else;
+      case LanguageConceptSwitch.EmptyBooleanDeclaration:
+        if (props_EmptyBooleanDeclaration == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_EmptyBooleanDeclaration = cpb.create();
+        }
+        return props_EmptyBooleanDeclaration;
+      case LanguageConceptSwitch.EmptyIntegerDeclararion:
+        if (props_EmptyIntegerDeclararion == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_EmptyIntegerDeclararion = cpb.create();
+        }
+        return props_EmptyIntegerDeclararion;
       case LanguageConceptSwitch.EmptyLine:
         if (props_EmptyLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -145,7 +165,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.FunctionDeclaration:
         if (props_FunctionDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("wer das liest ist doof");
+          cpb.shortDesc("declare a function");
           cpb.presentationByName();
           props_FunctionDeclaration = cpb.create();
         }
@@ -170,6 +190,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IClassExpression = cpb.create();
         }
         return props_IClassExpression;
+      case LanguageConceptSwitch.IEmptyVariableDeclaration:
+        if (props_IEmptyVariableDeclaration == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IEmptyVariableDeclaration = cpb.create();
+        }
+        return props_IEmptyVariableDeclaration;
       case LanguageConceptSwitch.IExpression:
         if (props_IExpression == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -212,7 +238,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.IntegerDeclaration:
         if (props_IntegerDeclaration == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("boop");
+          cpb.shortDesc("declare in Integer");
           cpb.presentationByName();
           props_IntegerDeclaration = cpb.create();
         }

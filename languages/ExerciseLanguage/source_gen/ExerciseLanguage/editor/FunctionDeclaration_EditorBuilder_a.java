@@ -42,6 +42,7 @@ import jetbrains.mps.nodeEditor.cellActions.CellAction_DeleteNode;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandlerElementKeyMap;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 /*package*/ class FunctionDeclaration_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -195,7 +196,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return LINKS.parameters$7wvy;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.FunctionParameter$Hh;
+      return CONCEPTS.IEmptyVariableDeclaration$yV;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -335,6 +336,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
-    /*package*/ static final SConcept FunctionParameter$Hh = MetaAdapterFactory.getConcept(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x304de020ebcef043L, "ExerciseLanguage.structure.FunctionParameter");
+    /*package*/ static final SInterfaceConcept IEmptyVariableDeclaration$yV = MetaAdapterFactory.getInterfaceConcept(0x97a51900650f4519L, 0xa79289e9b2b161cbL, 0x30b5f0d749fc0c16L, "ExerciseLanguage.structure.IEmptyVariableDeclaration");
   }
 }
