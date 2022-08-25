@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="a7wo4d8y6hgu0p6w3d35uvqbr72ki1x">
+  <files names="ClassRegistry_Constraints.java:ConstantBooleanExpression_Constraints.java:ConstantIntegerExpression_Constraints.java:ConstraintsAspectDescriptor.java:Continue_Constraints.java:FunctionDeclaration_Constraints.java:FunctionExpression_Constraints.java:FunctionParameter_Constraints.java:IClassExpression_Constraints.java:IControlStatement_Constraints.java:ReferenceExpression_Constraints.java:Return_Constraints.java:SelfReferenceExpression_Constraints.java" />
+</product>
+

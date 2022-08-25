@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="cjvapwz9z98uamuc6iu9e5qkshs37og">
+  <files names="BinaryExpression_OperatorTypeMismatch_NonTypesystemRule.java:Class_ConstructorRules_NonTypesystemRule.java:FunctionArgumentCheck_NonTypesystemRule.java:FunctionDeclaration_TypeMismatch_NonTypesystemRule.java:ObjectInstantiationExpression_ConstructorRules_NonTypesystemRule.java:OperatorAssign_LeftSideDeclarationCheck_NonTypesystemRule.java:TypesystemDescriptor.java:UnaryExpression_OperatorTypeMismatch_NonTypesystemRule.java:VariableDeclaration_RepetitionCheck_NonTypesystemRule.java" />
+</product>
+

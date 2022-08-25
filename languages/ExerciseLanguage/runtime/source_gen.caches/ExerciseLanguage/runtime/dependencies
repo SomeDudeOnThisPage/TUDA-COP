@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <uses language="l:97a51900-650f-4519-a792-89e9b2b161cb:ExerciseLanguage" />
+  <uses language="l:18b74e1f-df5e-4404-840c-5428847e31a7:ExerciseLanguageTestLanguage" />
+  <uses module="c2d6a3e6-da89-41d6-bc93-29e820a4d630(ExerciseLanguage.runtime)" kind="rt" />
+</dependenciesRoot>
+
